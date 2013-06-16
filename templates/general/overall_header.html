@@ -16,7 +16,7 @@
 {META_FB_LIKE}
 <meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}" />
 {T_HEAD_STYLESHEET}
-	{CSS}
+{CSS}
 <link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}" />
 <link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}" />
 <script src="{JQUERY_PATH}" type="text/javascript"></script>
@@ -72,109 +72,24 @@
 <!-- END hitskin_preview --> 
 
 <!-- BEGIN switch_login_popup -->
-<div id="login_popup" class="module main">
-  <div id="login_popup_title" class="main-head">
-    <div class="h3">{SITENAME}</div>
-  </div>
-  <div class="main-content"> {LOGIN_POPUP_MSG}
-    <div id="login_popup_buttons">
-      <form action="{S_LOGIN_ACTION}" method="get">
-        <input type="submit" class="button2" value="{L_LOGIN}" />
-        <input type="button" class="button2" value="{L_REGISTER}" onclick="parent.location='{U_REGISTER}';" />
-        <input id="login_popup_close" type="button" class="button2" value="{L_DONT_DISPLAY_AGAIN}" />
-      </form>
-    </div>
-  </div>
-</div>
 <!-- END switch_login_popup --> 
 
 <a id="top" name="top" accesskey="t"></a>
-<div class="minwidth_IE">
-  <div class="layout_IE">
-    <div class="container_IE">
-      <div class="pun">
-        <div id="pun-intro" class="clearfix"> <a href="{U_INDEX}" id="pun-logo"><img src="{LOGO}" alt="{L_INDEX}" /></a> 
-          
-          <!-- BEGIN switch_h1 -->
-          <div id="pun-title">{switch_h1.MAIN_SITENAME}</div>
-          <!-- END switch_h1 --> 
-          
-          <!-- BEGIN switch_desc -->
-          <p id="pun-desc">{switch_desc.SITE_DESCRIPTION}</p>
-          <!-- END switch_desc --> 
-        </div>
-        <div id="pun-head">
-          <div id="pun-navlinks">
-            <ul class="clearfix">
-              <li>{GENERATED_NAV_BAR}</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- BEGIN switch_ticker_new -->
-        <div id="fa_ticker_block" style="padding-top:4px;">
-          <div class="module main">
-            <div class="main-content clearfix">
-              <div id="fa_ticker_container">
-                <ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display: none;width: 100%;">
-                  <!-- BEGIN ticker_row -->
-                  <li>{switch_ticker.ticker_row.ELEMENT}</li>
-                  <!-- END ticker_row -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END switch_ticker_new --> 
-        
-        <!-- BEGIN switch_ticker -->
-        <div id="fa_ticker_block" style="padding-top:4px;">
-          <div class="module main">
-            <div class="main-content clearfix">
-              <div id="fa_ticker_container">
-                <div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;">
-                  <div class="fa_ticker_content"> 
-                    <!-- BEGIN ticker_row -->
-                    <div>{switch_ticker.ticker_row.ELEMENT}</div>
-                    <!-- END ticker_row --> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- END switch_ticker -->
-        
-        <div id="page-body">
-          <div id="{ID_CONTENT_CONTAINER}"{CLASS_CONTENT_CONTAINER}>
-            <div id="outer-wrapper">
-              <div id="wrapper">
-                <div id="container">
-                  <div id="content">
-                    <div id="{ID_LEFT}"> 
-                      <!-- BEGIN giefmod_index1 --> 
-                      {giefmod_index1.MODVAR} 
-                      <!-- BEGIN saut -->
-                      <div style="height:{SPACE_ROW}px"></div>
-                      <!-- END saut --> 
-                      <!-- END giefmod_index1 --> 
-                    </div>
-                    <div id="main">
-                      <div id="main-content"> 
-                        
-                        <!-- BEGIN html_validation --> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<header class="container-12">
+  <div class="grid-12"> 
+    <!-- BEGIN switch_h1 -->
+    {switch_h1.MAIN_SITENAME}
+    <!-- END switch_h1 -->
+    
+    <!-- BEGIN switch_desc -->
+    <p>{switch_desc.SITE_DESCRIPTION}</p>
+    <!-- END switch_desc -->
   </div>
-</div>
+</header>
+<nav id="topnav" class="container-12">
+  <ul class="grid-12">
+    <li>{GENERATED_NAV_BAR}</li>
+  </ul>
+</nav>
 </body>
 </html>
-<!-- END html_validation -->

@@ -1,12 +1,30 @@
 {JAVASCRIPT}
+<!--
+  
+  Aquí se muestra la barra de herramientas 
+    
+-->
+<section id="breadcrumb_toolbar" class="container-12">
+  <div id="breadcrumb" class="grid-6">
+    <a href="{U_INDEX}">{L_INDEX}</a>
+    <strong>{NAV_CAT_DESC}</strong>
+  </div>
+  
+  <div id="toolbar" class="grid-6">
+    <ul>
+      <li><a href="{U_SEARCH_NEW}">Mensajes nuevos<!--{L_SEARCH_NEW}--></a></li>
+      <li><a href="{U_SEARCH_SELF}">Tus mensajes <!--{L_SEARCH_SELF}--></a></li>
+      <!--<li><a href="{U_SEARCH_UNANSWERED}">Sin respuesta{L_SEARCH_UNANSWERED}</a></li>-->
+      <li><a href="{U_MARK_READ}">Marcar todos como leídos{L_MARK_FORUMS_READ}</a></li>
+	</ul>
+  </div>
+</section>
+
+
+
 <!-- BEGIN switch_user_logged_in -->
 <div id="pun-visit" class="clearfix">
-	<ul>
-			<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
-			<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
-		<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
-		<li><a href="{U_MARK_READ}">{L_MARK_FORUMS_READ}</a></li>
-	</ul>
+	
 	<p>{LOGGED_AS}. {LAST_VISIT_DATE}</p>
 </div>
 <!-- END switch_user_logged_in -->

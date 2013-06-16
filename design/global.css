@@ -77,6 +77,12 @@ li {
 
 ------------------------------*/
 
+.clearfloat {
+  float:none;
+  clear:both;
+  font-size:1px;
+}
+
 /*==================================================
 
     Responsive design
@@ -268,6 +274,24 @@ nav#topnav li {
 
 
 ###########################################################*/
+/*==================================================
+
+	Opción por defecto.
+    - 3 líneas
+     - Descripción
+     - Posts y mensajes
+     - Último post
+
+==================================================*/
+.forum-list li.forum {
+  height:auto;
+  border-bottom:#000 1px dotted;
+}
+.forum-list li.forum .description .image-container {
+  overflow:hidden;
+  height:0;
+  display:none;
+}
 
 /*==================================================
 

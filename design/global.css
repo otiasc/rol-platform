@@ -1,0 +1,393 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:100,400,700);
+/*###########################################################
+
+
+    Aspectos generales
+
+
+###########################################################*/
+
+/*==================================================
+
+	Formato de etiquetas sin clases
+
+==================================================*/
+
+/*------------------------------
+
+	Etiquetas html, body
+
+------------------------------*/
+html {
+  font-family:'Titillium Web';
+  font-size:0.813em;
+  font-weight:400;
+}
+body {
+  text-align:center;
+}
+
+/*------------------------------
+
+	Párrafos
+
+------------------------------*/
+h1 {
+  font-weight:700;
+  font-size:2.923em;
+  margin:0.5em 0 0 0;
+}
+p {
+  margin:0.5em 0;
+}
+
+/*------------------------------
+
+	Textos no párrafo
+
+------------------------------*/
+a {
+  color:#FF2800;
+  text-decoration:none;
+}
+a:hover {
+  color:#000000;
+  text-decoration:none;
+}
+
+/*------------------------------
+
+	Listas
+
+------------------------------*/
+ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+li {
+  padding:0;
+  margin:0;
+}
+
+/*------------------------------
+
+	Elementos de formulario
+
+------------------------------*/
+
+/*==================================================
+
+    Responsive design
+
+==================================================*/
+
+/*-------------------------------------
+
+	Mobile & Tablet > general
+
+-------------------------------------*/
+.container-12 {
+  padding:0 10px;
+  text-align:left;
+  float:none;
+  clear:both;
+}
+
+
+/*-------------------------------------
+
+	Grid system > general
+
+-------------------------------------*/
+@media all and (min-width:780px) and (min-device-width:780px) {
+.container-12 {
+  padding:0;
+  margin:0 auto;
+}
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+  float:left;
+  padding:0 10px;
+}
+}
+
+/*-------------------------------------
+
+	720gs
+
+-------------------------------------*/
+@media all and (min-width:780px) and (min-device-width:780px) {
+.container-12 {
+  width:720px;
+}
+.grid-1  {width:40px;}
+.grid-2  {width:100px;}
+.grid-3  {width:160px;}
+.grid-4  {width:220px;}
+.grid-5  {width:280px;}
+.grid-6  {width:340px;}
+.grid-7  {width:400px;}
+.grid-8  {width:460px;}
+.grid-9  {width:520px;}
+.grid-10 {width:580px;}
+.grid-11 {width:640px;}
+.grid-12 {width:700px;}
+}
+
+
+/*-------------------------------------
+
+	960gs
+
+-------------------------------------*/
+@media all and (min-width:980px) and (min-device-width:980px) {
+.container-12 {
+  width:960px;
+}
+.grid-1  {width:60px;}
+.grid-2  {width:140px;}
+.grid-3  {width:220px;}
+.grid-4  {width:300px;}
+.grid-5  {width:380px;}
+.grid-6  {width:460px;}
+.grid-7  {width:540px;}
+.grid-8  {width:620px;}
+.grid-9  {width:700px;}
+.grid-10 {width:780px;}
+.grid-11 {width:860px;}
+.grid-12 {width:940px;}
+}
+
+
+/*-------------------------------------
+
+	1200gs
+
+-------------------------------------*/
+@media all and (min-width:1280px) and (min-device-width:1280px) {
+.container-12 {
+  width:1200px;
+}
+.grid-1  {width:80px;}
+.grid-2  {width:180px;}
+.grid-3  {width:280px;}
+.grid-4  {width:380px;}
+.grid-5  {width:480px;}
+.grid-6  {width:580px;}
+.grid-7  {width:680px;}
+.grid-8  {width:780px;}
+.grid-9  {width:880px;}
+.grid-10 {width:980px;}
+.grid-11 {width:1080px;}
+.grid-12 {width:1180px;}
+}
+
+
+/*###########################################################
+
+
+    Estructura > Header
+
+
+###########################################################*/
+header {
+  font-size:1.5em;
+}
+header h1 {
+  color:#FF2800;
+}
+
+/*###########################################################
+
+
+    Estructura > Nav
+
+
+###########################################################*/
+nav#topnav li {
+  display:inline-block;
+  width:160px;
+  height:32px;
+}
+nav#topnav li a {
+  display:block;
+  height:16px;
+  padding:8px 0;
+}
+@media all and (min-width:780px) and (min-device-width:780px) {
+nav#topnav li {
+  width:auto;
+  margin:0 10px 0 0;
+}
+}
+
+
+/*###########################################################
+
+
+    Estructura > Toolbar & Breadcumbs
+
+
+###########################################################*/
+#breadcrumb_toolbar {
+  height:24px;
+  font-size:0.923em;
+}
+#breadcrumb {
+  text-align:left;
+}
+#breadcrumb a {
+  display:inline-block;
+  height:16px;
+  padding:4px 0;
+}
+#toolbar ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  text-align:right;
+}
+#toolbar li {
+  display:inline-block;
+}
+#toolbar li a {
+  display:inline-block;
+  height:16px;
+  padding:4px;
+}
+
+
+/*###########################################################
+
+
+    Estructura > Lista de foros en una categoría
+    
+    Sustitúyase .forum-list-option-X por c + ID de las
+    categorías a las que se quiere aplicar la opción
+
+
+###########################################################*/
+
+/*==================================================
+
+	Opción 1.
+    - 4 líneas
+     - Imagen oculta en mobile, a proporción 10:17 en resto
+     - Descripción
+     - Posts y mensajes
+     - Último post
+
+==================================================*/
+.forum-list-option-1 {
+  height:auto;
+  border-bottom:#000 1px dotted;
+}
+.forum-list-option-1 .description .image-container {
+  overflow:hidden;
+  height:0;
+  display:none;
+}
+@media all and (min-width:780px) {
+.forum-list-option-1 {
+  height:52em;
+  margin-bottom:2em;
+}
+.forum-list-option-1 .description .image-container {
+  display:block;
+  height:0;
+  padding:170% 0 0 0;
+  position:relative;
+}
+}
+.forum-list-option-1 .description img {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+}
+
+/*==================================================
+
+	Opción 2.
+    - 4 líneas
+     - Imagen oculta en mobile, a proporción 20:17 en resto
+     - Descripción
+     - Subforos, a proporción 20:17 en no mobile
+     - Posts y mensajes
+     - Último post
+
+==================================================*/
+.forum-list-option-2 {
+  height:auto;
+  border-bottom:#000 1px dotted;
+}
+.forum-list-option-2 .description .image-container {
+  overflow:hidden;
+  height:0;
+  display:none;
+}
+@media all and (min-width:780px) {
+.forum-list-option-2 {
+  height:52em;
+  margin-bottom:2em;
+}
+.forum-list-option-2 .description .image-container {
+  display:block;
+  height:0;
+  padding:85% 0 0 0;
+  position:relative;
+}
+.forum-list-option-2 .description .subforums-container {
+  height:0;
+  padding:85% 0 0 0;
+  margin:-85% 0 85% 0;
+  position:relative;
+}
+}
+.forum-list-option-2 .description img {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+}
+
+/*==================================================
+
+	Opción 3.
+    - 1 línea.
+    - Solo se ve el título
+    - El resto queda oculto
+    - Considerado bloque lineal en todas las versiones
+
+==================================================*/
+.forum-list-option-3 {
+  display:inline-block;
+}
+.forum-list-option-3 li div {
+  display:none;
+}
+
+
+.number-posts, .number-threads {
+  display:inline-block;
+  margin-right:1em;
+}
+.number-posts img,
+.number-threads img {
+  height:1em;
+  vertical-align:middle;
+}
+
+
+
+/*###########################################################
+
+
+    Estructura > Lista de temas en un foro
+    
+    Sustitúyase .thread-list-option-X por f + ID de las
+    categorías a las que se quiere aplicar la opción
+
+
+###########################################################*/

@@ -1,31 +1,36 @@
-<!-- BEGIN switch_user_logged_in -->
-<div id="pun-visit" class="clearfix">
-	<ul>
-		<li>
-	 		<script type="text/javascript">//<![CDATA[
-				var url_newposts = '{U_NEWPOSTS_JS_PLUS_MENU}';
-				var url_egosearch = '{U_EGOSEARCH_JS_PLUS_MENU}';
-				var url_unanswered = '{U_UNANSWERED_JS_PLUS_MENU}';
-				var url_watchsearch = '{U_WATCHSEARCH_JS_PLUS_MENU}';
-				var url_tellfriend = '{U_TELLFRIEND_JS_PLUS_MENU}';
-				insert_plus_menu_new('f{FORUM_ID}&amp;f={FORUM_ID}','{JS_SESSION_ID}', {JS_AUTH_FAVOURITES});
-			//]]>
-			</script>
-		</li>
-	 	<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
-	 	<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
-	 	<li><a href="{U_MARK_READ}">{L_MARK_TOPICS_READ}</a></li>
-	</ul>
-	<p>{LOGGED_AS}. {LAST_VISIT_DATE}</p>
-</div>
-<!-- END switch_user_logged_in -->
-<!-- BEGIN switch_user_logged_out -->
-<div id="pun-visit">
-	<p>{L_NOT_CONNECTED} {L_LOGIN_REGISTER}</p>
-</div>
-<!-- END switch_user_logged_out -->
+<section id="breadcrumb_toolbar" class="container-12">
+  <div id="breadcrumb" class="grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> <strong>{NAV_CAT_DESC}</strong> </div>
+  <!-- BEGIN switch_user_logged_in -->
+  <div class="toolbar grid-6">
+    <ul>
+      <li><a href="{U_SEARCH_NEW}">Mensajes nuevos<!--{L_SEARCH_NEW}--></a></li>
+      <li><a href="{U_SEARCH_SELF}">Tus mensajes <!--{L_SEARCH_SELF}--></a></li>
+      <!--<li><a href="{U_SEARCH_UNANSWERED}">Sin respuesta{L_SEARCH_UNANSWERED}</a></li>-->
+      <li><a href="{U_MARK_READ}">Marcar todos como leídos<!--{L_MARK_FORUMS_READ}--></a></li>
+    </ul>
+  </div>
+  <!-- END switch_user_logged_in -->
+</section>
 
 {BOARD_INDEX}
+
+<hr class="container-12" />
+<section id="pagination_toolbar" class="container-12">
+  <div class="pagination grid-6">
+    {PAGINATION}&nbsp;
+  </div>
+  <div class="toolbar grid-6">
+    <!-- BEGIN switch_user_authpost -->
+    <ul>
+      <li><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">{L_POST_NEW_TOPIC}</a></li>
+    </ul>
+    <!-- END switch_user_authpost -->
+  </div>
+  <br class="clearfloat" />
+</section>
+
+{TOPICS_LIST_BOX}
+
 
 <div class="main paged">
 	<div class="paged-head clearfix">
@@ -35,7 +40,7 @@
 		<!-- END switch_user_authpost -->
 	</div>
 
-	{TOPICS_LIST_BOX}
+	
 
 	<div class="paged-foot clearfix">
 		<p class="paging">{PAGINATION}</p>

@@ -38,6 +38,10 @@ h1 {
   font-size:2.923em;
   margin:0.5em 0 0 0;
 }
+h4 {
+  font-size:1.154em;
+  margin:0.5em 0 0 0;
+}
 p {
   margin:0.5em 0;
 }
@@ -248,16 +252,16 @@ nav#topnav li {
   height:16px;
   padding:4px 0;
 }
-#toolbar ul {
+.toolbar ul {
   list-style:none;
   margin:0;
   padding:0;
   text-align:right;
 }
-#toolbar li {
+.toolbar li {
   display:inline-block;
 }
-#toolbar li a {
+.toolbar li a {
   display:inline-block;
   height:16px;
   padding:4px;
@@ -393,14 +397,21 @@ nav#topnav li {
 }
 
 
-.number-posts, .number-threads {
+.number,
+.number-posts,
+.number-threads {
   display:inline-block;
   margin-right:1em;
 }
+.number,
 .number-posts img,
 .number-threads img {
   height:1em;
   vertical-align:middle;
+}
+
+.text-topic-type {
+  display:inline-block;
 }
 
 

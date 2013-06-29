@@ -75,6 +75,19 @@ li {
   margin:0;
 }
 
+dl {
+  float:none;
+  width:100%;
+}
+dt {
+  float:left;
+  width:40%;
+}
+dd {
+  margin-left:40%;
+  padding:0 10px;
+}
+
 /*------------------------------
 
 	Elementos de formulario
@@ -426,3 +439,21 @@ nav#topnav li {
 
 
 ###########################################################*/
+
+
+/*###########################################################
+
+
+    Estructura > Post individual
+
+
+###########################################################*/
+.post-tools {
+}
+
+.post-tools ul {
+  text-align:right;
+}
+.post-tools li {
+  display:inline-block;
+}

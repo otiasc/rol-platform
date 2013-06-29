@@ -1,18 +1,16 @@
-<div class="main">
-	<div class="main-head"><h1 class="page-title">{MESSAGE_TITLE}</h1></div>
-	<div class="main-content">
-	<form action="{S_CONFIRM_ACTION}" method="post" class="frm-form">
-		<p class="frm-info">{MESSAGE_TEXT}</p>
-		{OPTIONAL_BAN_NEW}
-		<fieldset class="frm-set">
-			<dl>
-				<dt></dt>
-				<dd>
-					{S_HIDDEN_FIELDS}
-					<input type="submit" name="confirm" value="{L_YES}" />&nbsp;
-					<input type="submit" name="cancel" value="{L_NO}" />
-				</dd>
-			</dl>
-		</fieldset>
-	</form></div>
-</div>
+<section class="container-12">
+  <div class="grid-8">
+    <form action="{S_CONFIRM_ACTION}" method="post" class="frm-form">
+      <h1 class="page-title">{MESSAGE_TITLE}</h1>
+      <p>{MESSAGE_TEXT}</p>
+      {OPTIONAL_BAN_NEW}
+      {S_HIDDEN_FIELDS}
+      <div class="bottom-buttonset">
+        <ul>
+          <li><input type="submit" name="confirm" value="{L_YES}" /></li>
+          <li><input type="submit" name="cancel" value="{L_NO}" /></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</section>

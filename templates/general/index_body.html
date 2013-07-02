@@ -1,12 +1,12 @@
 {JAVASCRIPT} 
 <!--
   
-  Aquí se muestra la barra de herramientas 
+  INDEX BODY
     
 -->
-<section id="breadcrumb_toolbar" class="container-12">
-  <div id="breadcrumb" class="grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> <strong>{NAV_CAT_DESC}</strong> </div>
-  <div class="toolbar" class="grid-6">
+<section class="section-toolbar container-12" id="breadcrumb_toolbar">
+  <nav class="breadcrumb grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> <strong>{NAV_CAT_DESC}</strong> </nav>
+  <div class="toolbar grid-6">
     <ul>
       <li><a href="{U_SEARCH_NEW}">Mensajes nuevos<!--{L_SEARCH_NEW}--></a></li>
       <li><a href="{U_SEARCH_SELF}">Tus mensajes <!--{L_SEARCH_SELF}--></a></li>
@@ -17,16 +17,19 @@
 </section>
 
 <!-- BEGIN message_admin_index -->
-<section> 
-  <!-- BEGIN message_admin_titre -->
-  <h2>{message_admin_index.message_admin_titre.MES_TITRE}</h2>
-  <!-- END message_admin_titre --> 
-  
-  <!-- BEGIN message_admin_txt -->
-  <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
-  <!-- END message_admin_txt --> 
+<section class="section-adminmessage container-12" id="message_admin_index">
+  <div class="grid-12">
+    <!-- BEGIN message_admin_titre -->
+    <h2>{message_admin_index.message_admin_titre.MES_TITRE}</h2>
+    <!-- END message_admin_titre --> 
+    
+    <!-- BEGIN message_admin_txt -->
+    <p>{message_admin_index.message_admin_txt.MES_TXT}</p>
+    <!-- END message_admin_txt -->
+  </div>
 </section>
 <!-- END message_admin_index --> 
+
 
 <!-- BEGIN switch_user_login_form_header -->
 <!-- END switch_user_login_form_header --> 
@@ -35,7 +38,7 @@
 {BOARD_INDEX}
 
 <!-- BEGIN disable_viewonline -->
-<footer class="container-12">
+<section class="section-viewonline container-12">
   
   <div id="statistics" class="grid-12">
     <p>{TOTAL_POSTS}. {TOTAL_USERS} {NEWEST_USER}</p>
@@ -52,7 +55,7 @@
     <p>{RECORD_USERS}</p>
     <!--<p>{L_WHOSBIRTHDAY_TODAY} {L_WHOSBIRTHDAY_WEEK}</p>-->
   </div>
-</footer>
+</section>
 <!-- END disable_viewonline -->
 
 {AUTO_DST} 

@@ -1,18 +1,19 @@
 <!-- BEGIN topics_list_box -->
 <!-- BEGIN row -->
 <!-- BEGIN header_table -->
-<section class="container-12">
+<section class="section-topics-in-forum container-12">
   <h3 class="grid-12">Temas</h3>
+  <nav class="pagination">{PAGINATION}</nav>
   <ul class="topics">
 <!-- END header_table -->
 <!-- BEGIN topic -->
-    <li>
+    <li class="topic">
       <div class="grid-1">
         <div class="icon-topic"><img title="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" src="{topics_list_box.row.TOPIC_FOLDER_IMG}" alt="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" />{topics_list_box.row.ICON}{topics_list_box.row.PARTICIPATE_POST_IMG}</div>
         <div class="text text-topic-type">{topics_list_box.row.TOPIC_TYPE}</div>
       </div>
       <div class="grid-8">
-        <h4><a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a></h4>
+        <h4><a class="url-topic" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a></h4>
         <div class="text-author">{topics_list_box.row.L_BY} {topics_list_box.row.TOPIC_AUTHOR}</div>
       </div>
       <div class="grid-1">

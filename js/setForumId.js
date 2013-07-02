@@ -9,7 +9,6 @@
 
 ========================================================*/
 $(document).ready(function(e) {
-	alert($('.forum').length);
 	$('.forum').each(function(index, element) {
 		var url = $(this).find('.url-forum').attr('href');
 		var id = url.slice(1, url.indexOf('-'));

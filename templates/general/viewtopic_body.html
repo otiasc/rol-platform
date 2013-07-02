@@ -1,5 +1,5 @@
-<section id="breadcrumb_toolbar" class="container-12">
-  <div id="breadcrumb" class="grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> <strong>{NAV_CAT_DESC}</strong> </div>
+<section class="section-toolbar container-12">
+  <nav class="breadcrumb grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> <strong>{NAV_CAT_DESC}</strong> </nav>
   <!-- BEGIN switch_user_logged_in -->
   <div class="toolbar grid-6">
     <ul>
@@ -12,17 +12,14 @@
   <!-- END switch_user_logged_in -->
 </section>
 
-<section id="pagination_toolbar" class="container-12">
-  <div class="pagination grid-6">
-    {PAGINATION}&nbsp;
-  </div>
-  <div class="toolbar grid-6">
+<section class="section-toolbar container-12">
+  <div class="toolbar grid-12">
     <ul>
       <!-- BEGIN switch_user_authpost -->
       <li><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">{L_POST_NEW_TOPIC}</a></li>
       <!-- END switch_user_authpost -->
       <!-- BEGIN switch_user_authreply -->
-      <li><a href="{U_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}"</a></li>
+      <li><a href="{U_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}</a></li>
       <!-- END switch_user_authreply -->
     </ul>
   </div>
@@ -31,11 +28,14 @@
 
 {POLL_DISPLAY}
 
-<section class="container-12">
+<section class="section-posts-in-topic container-12">
+  <nav class="pagination grid-6">
+    {PAGINATION}
+  </nav>
   <ul class="posts">
     <!-- BEGIN postrow -->
     <!-- BEGIN displayed -->
-    <li>
+    <li class="post">
       <aside class="grid-3">
         <h3>{postrow.displayed.POSTER_NAME}</h3>
         <div class="avatar">{postrow.displayed.POSTER_AVATAR}</div>
@@ -64,7 +64,7 @@
             <li>{postrow.displayed.REPORT_IMG}</li>
           </ul>
         </div>
-        <div class="date"><a href="{postrow.displayed.POST_URL}">{postrow.displayed.POST_DATE_NEW}</a></div>
+        <div class="date"><a href="{postrow.displayed.POST_URL}" class="url-post">{postrow.displayed.POST_DATE_NEW}</a></div>
         <div class="message">{postrow.displayed.MESSAGE}</div>
         
       </article>

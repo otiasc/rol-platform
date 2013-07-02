@@ -1,28 +1,36 @@
-<section class="container-12"> 
-  <!-- BEGIN catrow --> 
-  <!-- BEGIN tablehead -->
-  {catrow.tablehead.L_FORUM}
-  
-  <ul class="subforums" id="cat-{catrow.CAT_ID}">
-  <!-- END tablehead -->
+<!--
+
+	ÍNDICE DE CATEGORÍAS
+
+-->
+<!-- BEGIN catrow -->
+<!-- BEGIN tablehead -->
+<section class="section-forums-in-category container-12"> 
+  <div class="grid-12">{catrow.tablehead.L_FORUM}</div>
+  <ul class="forums">
+    <!-- END tablehead --> 
     <!-- BEGIN forumrow -->
-    <li id="subforum-{catrow.forumrow.FORUM_ID}" class="grid-3">
-      <h3><a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a></h3>
-      <div class="description">
-        {catrow.forumrow.FORUM_DESC}
-      </div>
+    <li class="forum grid-3">
+      <h3><a href="{catrow.forumrow.U_VIEWFORUM}" class="url-forum">{catrow.forumrow.FORUM_NAME}</a></h3>
+      <div class="description"> {catrow.forumrow.FORUM_DESC} </div>
       <div class="number-threads"><img src="imgs/icon-threads.png" title="Temas:" /> {catrow.forumrow.TOPICS}</div>
       <div class="number-posts"><img src="imgs/icon-posts.png" title="Mensajes:" /> {catrow.forumrow.POSTS} <img title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" /></div>
       <div class="lastest-post"><!-- BEGIN switch_topic_title --> Último tema: <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><!-- END switch_topic_title --> 
-            </div>
+      </div>
     </li>
     <!-- END forumrow -->
-  <!-- BEGIN tablefoot -->
+    <!-- BEGIN tablefoot --> 
     <br class="clearfloat" />
   </ul>
-  <!-- END tablefoot -->
-  <!-- END catrow --> 
 </section>
+<!-- END tablefoot -->
+<!-- END catrow --> 
+<!---
+
+
+
+
+-->
 
 <!-- BEGIN switch_on_index -->
 <div class="main-box clearfix">

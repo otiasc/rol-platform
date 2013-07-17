@@ -20,6 +20,9 @@
 <link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}" />
 <link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}" />
 <script src="{JQUERY_PATH}" type="text/javascript"></script>
+<script src="http://otiasc.github.io/Seijyuji-Book2/js/utils.js" type="text/javascript"></script>  
+<script src="http://otiasc.github.io/Seijyuji-Book2/ckeditor/ckeditor.js" type="text/javascript"></script>
+
 <script src="{JS_DIR}{L_LANG}.js" type="text/javascript"></script>
 
 <!-- BEGIN switch_fb_login -->
@@ -76,8 +79,8 @@
 
 <a id="top" name="top" accesskey="t"></a>
 <header class="container-12">
-  <div class="grid-12">
-    <a href="{U_INDEX}" id="pun-logo"><img src="{LOGO}" alt="{L_INDEX}" /></a>
+  <a href="{U_INDEX}" id="logo"><img src="{LOGO}" alt="{L_INDEX}" /></a>
+  <div class="title-and-description">
     <!-- BEGIN switch_h1 -->
     {switch_h1.MAIN_SITENAME}
     <!-- END switch_h1 -->
@@ -86,11 +89,13 @@
     <p>{switch_desc.SITE_DESCRIPTION}</p>
     <!-- END switch_desc -->
   </div>
+  <br class="clearfloat" />
+  <nav id="topnav" class="container-12">
+    <ul class="grid-12">
+      <li>{GENERATED_NAV_BAR}</li>
+      <br class="clearfloat" />
+    </ul>
+  </nav>
 </header>
-<nav id="topnav" class="container-12">
-  <ul class="grid-12">
-    <li>{GENERATED_NAV_BAR}</li>
-  </ul>
-</nav>
 </body>
 </html>

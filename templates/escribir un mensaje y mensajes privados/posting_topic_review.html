@@ -1,0 +1,26 @@
+<section class="section-post-topic-review"> 
+  <!-- BEGIN switch_inline_mode -->
+  
+  <h2>{L_TOPIC_REVIEW}</h2>
+  <!-- END switch_inline_mode -->
+  
+  <ul class="topics">
+    <!-- BEGIN postrow --> 
+    <!-- BEGIN displayed -->
+    <li class="post">
+      <aside class="grid-3">&nbsp;</aside>
+      <article class="grid-9">
+        <div class="message">{postrow.displayed.MESSAGE}</div>
+        <div class="date">{postrow.displayed.POSTER_NAME}, <a href="{postrow.displayed.POST_URL}" class="url-post">{postrow.displayed.POST_DATE_NEW}</a></div>
+      </article>
+      <br class="clearfloat" />
+    </li>
+    <!-- END displayed --> 
+    <!-- BEGIN hidden -->
+    <div class="main-content topic">
+      <p class="p-hidden">{postrow.hidden.MESSAGE}</p>
+    </div>
+    <!-- END hidden --> 
+    <!-- END postrow -->
+  </ul>
+</section>

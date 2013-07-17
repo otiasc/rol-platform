@@ -1,0 +1,98 @@
+<section class="section-view-profile">
+  <h1>{L_VIEWING_PROFILE}</h1>
+  <aside class="grid-3">
+    <div class="avatar">{AVATAR_IMG}</div>
+    <div class="rank">{POSTER_RANK}</div>
+    <!-- BEGIN switch_show_status -->
+    <div class="online">{USER_ONLINE}</div>
+    <!-- END switch_show_status -->
+    <dl>
+      <!-- BEGIN profile_field -->
+      <dt>{profile_field.LABEL}</dt>
+      <dd>{profile_field.CONTENT}</dd>
+      <br class="clearfloat" />
+      <!-- END profile_field -->
+    </dl>
+    <div>{postrow.displayed.POSTER_RPG}</div>
+    <!-- BEGIN switch_auth_user -->
+    <dl>
+      <dt>{L_ADMINISTRATE_USER}:</dt>
+      <dd><strong>{ADMINISTRATE_USER}{BAN_USER}</strong></dd>
+    </dl>
+    <!-- END switch_auth_user --> 
+  </aside>
+  <form action="{S_PROFILE_ACTION}" method="post" name="post" class="">
+    <h2> {L_STATS}</h2>
+    <dl>
+      <dt>{L_LAST_VISITED}:</dt>
+      <dd>{LAST_VISIT_TIME}</dd>
+      <!-- BEGIN switch_dhow_mp -->
+      <dt>{L_PRIVATE_MSG}:</dt>
+      <dd>{PRIVATE_MSG}</dd>
+      <!-- END switch_dhow_mp -->
+    </dl>
+    </div>
+    
+    <!-- BEGIN profil_type_user_posts -->
+    <ul>
+      <li><a rel="nofollow" href="/sta/{PUSERNAME}">{L_TOPICS}</a></li>
+      <li><a rel="nofollow" href="/spa/{PUSERNAME}">{L_POSTS}</a></li>
+    </ul>
+    <!-- END profil_type_user_posts -->
+      <h2>{L_CONTACT} {USERNAME}</h2>
+      <!-- BEGIN contact_field -->
+      <dl id="field_id{contact_field.ID}">
+        <dt>{contact_field.LABEL}</dt>
+        <dd>{contact_field.CONTENT}</dd>
+      </dl>
+      <!-- END contact_field --> 
+      
+      <!-- BEGIN switch_admin_user_comment_active -->
+      <dl>
+        <dt>{L_COMMENTS} :<br />
+          <span class="italic">{L_MODS_AND_ADMINS}</span></dt>
+        <dd>
+          <textarea name="admin_user_comment_text" rows="8" cols="30">{ADMIN_USER_COMMENT}</textarea>
+        </dd>
+      </dl>
+      <dl class="frm-buttons clearfix">
+        <dt>&nbsp;</dt>
+        <dd>
+          <input type="hidden" value="update_admin_user_comment" name="mode" />
+          <input type="hidden" value="{USER_ID}" name="userid" />
+          <input type="submit" name="user_comment_maj" value="{L_UPDATE}" />
+        </dd>
+      </dl>
+      <!-- END switch_admin_user_comment_active -->
+    
+    <!-- BEGIN switch_rpg -->
+    <h2>{L_VIEWING_RPG}</h2>
+      <dl>
+        <dt>{RPG_IMAGE}</dt>
+        <dd>&nbsp;</dd>
+      </dl>
+      <!-- BEGIN rpg_fields_left -->
+      <dl>
+        <dt>{switch_rpg.rpg_fields_left.F_NAME} :</dt>
+        <dd>{switch_rpg.rpg_fields_left.F_VALUE_NEW}</dd>
+      </dl>
+      <!-- END rpg_fields_left --> 
+      <!-- BEGIN rpg_fields -->
+      <dl>
+        <dt>{switch_rpg.rpg_fields.F_NAME} :</dt>
+        <dd>{switch_rpg.rpg_fields.F_VALUE_NEW}</dd>
+      </dl>
+      <!-- END rpg_fields -->
+    <br class="clear" />
+    <fieldset class="frm-set clearfix">
+      {U_ADMIN_RPG}
+    </fieldset>
+    <!-- END switch_rpg -->
+  </form>
+</section>
+<!--
+
+
+
+
+-->

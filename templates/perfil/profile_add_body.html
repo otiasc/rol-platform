@@ -1,0 +1,634 @@
+<script type="text/javascript" src="{JSPWD}"></script>
+
+{ERROR_BOX} 
+
+<section class="section-profile-form">
+  <h1>Mi perfil</h1>
+  <!-- BEGIN switch_display_menu -->
+  <aside class="ucp-tabs">
+  {UCP_TABS}
+  </aside>
+  <!-- END switch_display_menu -->
+  <form action="{S_PROFILE_ACTION}" {S_FORM_ENCTYPE} method="post" name="post" id="ucp" class="ucp-form">
+    <!-- BEGIN switch_informations_menu -->
+    <h2>{L_REGISTRATION_INFO}</h2>
+    <div>{L_MY_PROFILE}</div>
+    <fieldset>
+      <dl>
+        <dt>
+          <label>{L_USERNAME} *</label>
+        </dt>
+        <dd> 
+          <!-- BEGIN switch_namechange_disallowed -->
+          <input type="hidden" name="username" value="{USERNAME}" />
+          <input type="text" name="username_visible" value="{USERNAME}" readonly disabled="disabled" />
+          <!-- END switch_namechange_disallowed --> 
+          
+          <!-- BEGIN switch_namechange_allowed -->
+          <input type="text" name="username" value="{USERNAME}" />
+          <!-- END switch_namechange_allowed --> 
+        </dd>
+        <dt>
+          <label>{L_EMAIL_ADDRESS} *</label>
+        </dt>
+        <dd> 
+          <!-- BEGIN switch_emailchange_disallowed -->
+          <input type="hidden" name="email" value="{EMAIL}" />
+          <input type="text" name="email_visible" value="{EMAIL}" readonly disabled="disabled" />
+          <!-- END switch_emailchange_disallowed --> 
+          <!-- BEGIN switch_emailchange_allowed -->
+          <input type="text" name="email" value="{EMAIL}" />
+          <!-- END switch_emailchange_allowed --> 
+        </dd>
+        
+        <!-- BEGIN switch_change_password -->
+        <dt>
+          <label>{L_CHANGE_PASSWORD} *</label>
+        </dt>
+        <dd><a class="button" href="{LINK_FOR_PASSWD_CHANGE}" target="_blank">{L_MODIFY}</a></dd>
+        <!-- END switch_change_password -->
+      </dl>
+    </fieldset>
+    
+    <!-- BEGIN switch_span_div --> 
+    <!-- END switch_span_div -->
+    
+    <fieldset>
+      <dl>
+        <!-- BEGIN switch_website -->
+        <dt>
+          <label>{L_WEBSITE}: {MUST_LABEL_2}</label>
+        </dt>
+        <dd>
+          <input type="text" name="website" value="{WEBSITE}" class="inputbox" />
+        </dd>
+        <!-- END switch_website --> 
+        <!---------------------------------> 
+        <!-- BEGIN switch_location -->
+        <dt>
+          <label>{L_LOCATION}: {MUST_LABEL_1}</label>
+        </dt>
+        <dd>
+          <input type="text" name="location" value="{LOCATION}" class="inputbox" />
+        </dd>
+        <!-- END switch_location --> 
+        <!---------------------------------> 
+        <!-- BEGIN switch_occupation -->
+        <dt>
+          <label>{L_HUMOR}: {MUST_LABEL_3}</label>
+        </dt>
+        <dd>
+          <input type="text" name="occupation" value="{OCCUPATION}" class="inputbox" />
+        </dd>
+        <!-- END switch_occupation --> 
+        <!---------------------------------> 
+        <!-- BEGIN switch_interests -->
+        <dt>
+          <label>{L_INTERESTS}: {MUST_LABEL_4}</label>
+        </dt>
+        <dd>
+          <input type="text" name="interests" value="{INTERESTS}" class="inputbox" />
+        </dd>
+        <!-- END switch_interests --> 
+        <!---------------------------------> 
+        <!-- BEGIN switch_gender -->
+        <dt>
+          <label>{L_GENDER}: {MUST_GENDER}</label>
+        </dt>
+        <dd>
+          <label>
+            <input type="radio" name="gender" value="1" {GENDER_MALE_CHECKED} />
+            {L_GENDER_MALE} </label>
+          <label>
+            <input type="radio" name="gender" value="2" {GENDER_FEMALE_CHECKED} />
+            {L_GENDER_FEMALE} </label>
+        </dd>
+        <!-- END switch_gender --> 
+        <!---------------------------------> 
+        <!-- BEGIN switch_birthday -->
+        <dt>
+          <label>{L_BIRTHDAY} {BIRTHDAY_REQUIRED}</label>
+        </dt>
+        <dd>{S_BIRTHDAY_NEW}</dd>
+        <!-- END switch_birthday -->
+      </dl>
+    </fieldset>
+    
+    <!-- BEGIN switch_profile_fields -->
+    <fieldset>
+      <dl>
+        <!-- BEGIN field -->
+        <dt>
+          <label>{switch_informations_menu.switch_profile_fields.field.NAME}</label>
+        </dt>
+        <dd>
+          <div>{switch_informations_menu.switch_profile_fields.field.OBJECT}</div>
+          <small>{switch_informations_menu.switch_profile_fields.field.DESCRIPTION}</small> </dd>
+        <!-- END field -->
+      </dl>
+    </fieldset>
+    <!-- END switch_profile_fields --> 
+    
+    <!-- BEGIN switch_profile_fields_register -->
+    <fieldset>
+      <dl>
+        <!-- BEGIN field -->
+        <dt>
+          <label>{switch_informations_menu.switch_profile_fields_register.field.NAME}:</label>
+        </dt>
+        <dd>{switch_informations_menu.switch_profile_fields_register.field.OBJECT}</dd>
+        <!-- END field -->
+      </dl>
+    </fieldset>
+    <!-- END switch_profile_fields_register --> 
+    <!-- END switch_informations_menu --> 
+    <!---------------------------------> 
+    <!--                             --> 
+    <!---------------------------------> 
+    <!-- BEGIN switch_confirm_password -->
+    <h2>{L_REGISTRATION_INFO}</h2>
+    <fieldset>
+      <dl>
+        <dt>
+          <label>{L_CURRENT_PASSWORD} *</label>
+        </dt>
+        <dd>
+          <input type="password" name="cur_password" value="{CUR_PASSWORD}" class="inputbox" />
+        </dd>
+      </dl>
+    </fieldset>
+    <!-- END switch_confirm_password --> 
+    
+    <!-- BEGIN switch_confirm_password_new -->
+    <fieldset>
+      <dl>
+        <dt>
+          <label>{L_NEW_PASSWORD} *</label>
+        </dt>
+        <dd>
+          <input type="password" name="new_password" value="{NEW_PASSWORD}" class="inputbox" maxlength="25" />
+        </dd>
+        <dt>
+          <label>{L_CONFIRM_PASSWORD} *</label>
+        </dt>
+        <dd>
+          <input type="password" name="password_confirm" value="{PASSWORD_CONFIRM}" class="inputbox" maxlength="25" />
+          <input type="hidden" name="change_password" value="change_password" />
+        </dd>
+      </dl>
+    </fieldset>
+    <!-- END switch_confirm_password_new --> 
+    
+    <!-- BEGIN switch_preferences_menu -->
+    <h2>{L_PREFERENCES}</h2>
+    <fieldset class="frm-set">
+      <dl>
+        <dt>
+          <label>{L_PUBLIC_VIEW_EMAIL}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="viewemail" value="2" {VIEW_EMAIL_FORM} />
+                {L_YES}</label>
+            </li>
+            <!-- BEGIN switch_enable_mail_view -->
+            <li>
+              <label>
+                <input type="radio" name="viewemail" value="2" {VIEW_EMAIL_FORM} />
+                {L_FORM}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="viewemail" value="1" {VIEW_EMAIL_MAILTO} />
+                {L_MAILTO}</label>
+            </li>
+            <!-- END switch_enable_mail_view -->
+            <li>
+              <label>
+                <input type="radio" name="viewemail" value="0" {VIEW_EMAIL_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- BEGIN switch_view_pm -->
+        <dt>
+          <label>{L_PUBLIC_VIEW_MP}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="view_pm" value="1" {VIEW_MP_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="view_pm" value="0" {VIEW_MP_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- END switch_view_pm --> 
+        <!-- BEGIN switch_profile_advanced -->
+        <dt>
+          <label>{switch_preferences_menu.switch_profile_advanced.L_ALLOW_PROFILE_MSGS}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="profilemsgs" value="2" {switch_preferences_menu.switch_profile_advanced.PROFILE_MSGS_ALL} />
+                {L_ALL_USERS}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="profilemsgs" value="1" {switch_preferences_menu.switch_profile_advanced.PROFILE_MSGS_FRIENDS} />
+                {L_MY_FRIENDS}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="profilemsgs" value="0" {switch_preferences_menu.switch_profile_advanced.PROFILE_MSGS_NONE} />
+                {L_NO_ONE}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="profilemsgs" value="-1" {switch_preferences_menu.switch_profile_advanced.PROFILE_MSGS_HIDE} />
+                {L_HIDE_TAB}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- END switch_profile_advanced --> 
+        <!-- BEGIN switch_fb_connect -->
+        <dt>
+          <label>{switch_preferences_menu.switch_fb_connect.L_FB_LINK_ACCOUNT} :</label>
+        </dt>
+        <dd> 
+          <!-- BEGIN switch_fb_account_linked --> 
+          <small>{switch_preferences_menu.switch_fb_connect.switch_fb_account_linked.L_FB_ACCOUNT_LINKED}</small> 
+          <!-- END switch_fb_account_linked --> 
+          
+          <!-- BEGIN switch_fb_account_not_linked -->
+          <fb:login-button size="medium" onlogin="facebook_link()" v="2">{switch_preferences_menu.switch_fb_connect.switch_fb_account_not_linked.L_FB_LOGIN_BUTTON}</fb:login-button>
+          <!-- END switch_fb_account_not_linked --> 
+        </dd>
+        <!-- BEGIN switch_fb_account_linked -->
+        <dt>
+          <label>{switch_preferences_menu.switch_fb_connect.switch_fb_account_linked.L_UNLINK_FB_ACCOUNT_EXPLAIN}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="unlink_fb_account" value="1" />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="unlink_fb_account" value="0" checked="checked" />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- END switch_fb_account_linked --> 
+        <!-- END switch_fb_connect -->
+        <dt>
+          <label>{L_NEWSLETTER_ACCEPT}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="newsletter" value="1" {NEWSLETTER_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="newsletter" value="0" {NEWSLETTER_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+          <small>{L_NEWSLETTER_ACCEPT_EXPLAIN}</small> </dd>
+        <dt>
+          <label>{L_HIDE_USER}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="hideonline" value="1" {HIDE_USER_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="hideonline" value="0" {HIDE_USER_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <label>{L_NOTIFY_ON_REPLY}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="notifyreply" value="1" {NOTIFY_REPLY_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="notifyreply" value="0" {NOTIFY_REPLY_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+          <small>{L_NOTIFY_ON_REPLY_EXPLAIN}</small> </dd>
+        <dt>
+          <label>{L_NOTIFY_ON_PRIVMSG}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="notifypm" value="1" {NOTIFY_PM_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="notifypm" value="0" {NOTIFY_PM_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- BEGIN switch_can_disable_mass_pm -->
+        <dt>
+          <label>{L_ENABLE_MASS_PM} </label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="allow_mass_pm" value="4" {ALLOW_MASS_PM_NOTIFY_CHECKED} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="allow_mass_pm" value="2" {ALLOW_MASS_PM_CHECKED} />
+                {L_NO}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="allow_mass_pm" value="0" {DISABLE_MASS_PM_CHECKED} />
+                {L_NO_MASS_PM}</label>
+            </li>
+          </ul>
+          <small>{L_ENABLE_MASS_PM_EXPLAIN}</small> </dd>
+        <!-- END switch_can_disable_mass_pm --> 
+        <!-- BEGIN switch_notify_subscriptions -->
+        <dt>
+          <label>{L_NOTIFY_SUBSCRIPTIONS}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="notify_subscriptions" value="1" {NOTIFY_SUBSCRIPTIONS_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="notify_subscriptions" value="0" {NOTIFY_SUBSCRIPTIONS_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- END switch_notify_subscriptions -->
+        <dt>
+          <label>{L_POPUP_ON_PRIVMSG}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="popup_pm" value="1" {POPUP_PM_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="popup_pm" value="0" {POPUP_PM_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+          <small>{L_POPUP_ON_PRIVMSG_EXPLAIN}</small> </dd>
+        <dt>
+          <label>{L_NOTIFY_POST_PREVENT}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="post_prevent" value="1" {POST_PREVENT_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="post_prevent" value="0" {POST_PREVENT_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+          <small>{L_NOTIFY_POST_PREVENT_EXPLAIN}</small> </dd>
+        <!-- BEGIN switch_report -->
+        <dt>
+          <label>{switch_preferences_menu.switch_report.L_NO_REPORT_POPUP}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="no_report_popup" value="0" {switch_preferences_menu.switch_report.NO_REPORT_POPUP_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="no_report_popup" value="1" {switch_preferences_menu.switch_report.NO_REPORT_POPUP_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <label>{switch_preferences_menu.switch_report.L_NO_REPORT_MAIL}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="no_report_mail" value="0" {switch_preferences_menu.switch_report.NO_REPORT_MAIL_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="no_report_mail" value="1" {switch_preferences_menu.switch_report.NO_REPORT_MAIL_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <!-- END switch_report -->
+        <dt>
+          <label>{L_ALWAYS_ADD_SIGNATURE}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="attachsig" value="1" {ALWAYS_ADD_SIGNATURE_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="attachsig" value="0" {ALWAYS_ADD_SIGNATURE_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <label>{L_ALWAYS_ALLOW_BBCODE}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="allowbbcode" value="1" {ALWAYS_ALLOW_BBCODE_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="allowbbcode" value="0" {ALWAYS_ALLOW_BBCODE_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <label>{L_ALWAYS_ALLOW_HTML}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="allowhtml" value="1" {ALWAYS_ALLOW_HTML_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="allowhtml" value="0" {ALWAYS_ALLOW_HTML_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <label>{L_ALWAYS_ALLOW_SMILIES}</label>
+        </dt>
+        <dd>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="allowsmilies" value="1" {ALWAYS_ALLOW_SMILIES_YES} />
+                {L_YES}</label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="allowsmilies" value="0" {ALWAYS_ALLOW_SMILIES_NO} />
+                {L_NO}</label>
+            </li>
+          </ul>
+        </dd>
+        <dt>
+          <label>{L_BOARD_LANGUAGE}</label>
+        </dt>
+        <dd>{LANGUAGE_SELECT}</dd>
+        <dt>
+          <label>{L_TIMEZONE}</label>
+        </dt>
+        <dd>{TIMEZONE_SELECT}</dd>
+        <dt>
+          <label>{L_DATE_FORMAT}</label>
+        </dt>
+        <dd>{DATE_FORMAT} <small>{CURRENT_TIME}</small> </dd>
+      </dl>
+    </fieldset>
+    
+    <!-- END switch_preferences_menu --> 
+    
+    <!-- BEGIN switch_avatar_block -->
+    <h2>{L_AVATAR_PANEL}</h2>
+    <fieldset class="frm-set">
+      <dl>
+        <dt>
+          <label>{L_CURRENT_IMAGE}</label>
+        </dt>
+        <dd> {AVATAR} <br />
+          <input type="checkbox" name="avatardel" />
+          {L_DELETE_AVATAR} </dd>
+        <!-- BEGIN switch_avatar_local_upload -->
+        <dt>
+          <label>{L_UPLOAD_AVATAR_FILE}</label>
+        </dt>
+        <dd>
+          <input type="file" name="avatar" class="inputbox" />
+        </dd>
+        <!-- END switch_avatar_local_upload --> 
+        <!-- BEGIN switch_avatar_remote_upload -->
+        <dt>
+          <label>{L_UPLOAD_AVATAR_URL}</label>
+        </dt>
+        <dd>
+          <input type="text" name="avatarurl" class="inputbox" />
+          <br />
+          <small>{L_UPLOAD_AVATAR_URL_EXPLAIN}</small> </dd>
+        <!-- END switch_avatar_remote_upload --> 
+        <!-- BEGIN switch_avatar_remote_link -->
+        <dt>
+          <label>{L_LINK_REMOTE_AVATAR}</label>
+        </dt>
+        <dd>
+          <input type="text" name="avatarremoteurl" class="inputbox" />
+          <small>{L_LINK_REMOTE_AVATAR_EXPLAIN}</small> </dd>
+        <!-- END switch_avatar_remote_link --> 
+        <!-- BEGIN switch_avatar_local_gallery -->
+        <dt>
+          <label>{L_AVATAR_GALLERY}</label>
+        </dt>
+        <dd>
+          <input type="submit" name="avatargallery" value="{L_SHOW_GALLERY}" class="button" />
+        </dd>
+      </dl>
+      <!-- END switch_avatar_local_gallery -->
+    </fieldset>
+    <!-- END switch_avatar_block --> 
+    
+    <!-- BEGIN switch_informations_menu --> 
+    <!-- BEGIN switch_register_not_display --> 
+    <!-- BEGIN switch_unsubscribe_allowed -->
+    <fieldset>
+      <dl>
+        <dt>
+          <label>{L_DELETE}</label>
+        </dt>
+        <dd>
+          <input type="checkbox" name="delete_user" />
+          <small>{L_DELETE_EXPLAIN}</small> </dd>
+      </dl>
+    </fieldset>
+    <!-- END switch_unsubscribe_allowed --> 
+    <!-- END switch_register_not_display --> 
+    <!-- END switch_informations_menu -->
+    
+    <fieldset>
+      {S_HIDDEN_FIELDS}
+    </fieldset>
+    <section class="section-buttonset">
+      <input class="big-button" type="submit" name="submit" value="{L_SUBMIT}" />
+      <input type="reset" name="reset" value="{L_RESET}" />
+    </section>
+  </form>
+</section>

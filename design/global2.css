@@ -72,6 +72,15 @@ h6 {
   font-weight:300;
   font-size:1em;
 }
+h1.with-padding,
+h2.with-padding,
+h3.with-padding,
+h4.with-padding,
+h5.with-padding,
+h6.with-padding {
+  padding-left:10px;
+  padding-right:10px;
+}
 p {
   margin:0.5em 0;
 }

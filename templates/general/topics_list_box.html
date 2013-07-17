@@ -8,20 +8,22 @@
 <!-- END header_table -->
 <!-- BEGIN topic -->
     <li class="topic">
-      <div class="grid-1">
-        <div class="icon-topic"><img title="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" src="{topics_list_box.row.TOPIC_FOLDER_IMG}" alt="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" />{topics_list_box.row.ICON}{topics_list_box.row.PARTICIPATE_POST_IMG}</div>
-        <div class="text text-topic-type">{topics_list_box.row.TOPIC_TYPE}</div>
-      </div>
-      <div class="grid-8">
-        <h4><a class="url-topic" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a></h4>
+      <div class="topic-title">
+        <h4><a class="url-topic" href="{topics_list_box.row.U_VIEW_TOPIC}">
+          <div class="icon">
+            <img title="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" src="{topics_list_box.row.TOPIC_FOLDER_IMG}" alt="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" />{topics_list_box.row.ICON}{topics_list_box.row.PARTICIPATE_POST_IMG}
+          </div>
+          {topics_list_box.row.TOPIC_TYPE}
+        {topics_list_box.row.TOPIC_TITLE}
+        </a></h4>
         <div class="text-author">{topics_list_box.row.L_BY} {topics_list_box.row.TOPIC_AUTHOR}</div>
       </div>
-      <div class="grid-1">
+      <div class="topic-numbers">
         <div class="number number-replies">{topics_list_box.row.REPLIES}</div>
         <div class="number number-views">{topics_list_box.row.VIEWS}</div>
       </div>
-      <div class="grid-2">
-        <div class="text-last-post">{topics_list_box.row.LAST_POST_TIME} {topics_list_box.row.L_BY} {topics_list_box.row.LAST_POST_AUTHOR} {topics_list_box.row.LAST_POST_IMG}</div>
+      <div class="topic-last-post">
+        {topics_list_box.row.LAST_POST_TIME} {topics_list_box.row.L_BY} {topics_list_box.row.LAST_POST_AUTHOR} {topics_list_box.row.LAST_POST_IMG}
       </div>
       <br class="clearfloat" />
     </li>

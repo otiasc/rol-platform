@@ -1,4 +1,4 @@
-/*========================================================
+/*###########################################################
 
 	Descripción
 	-Añade a las clases .forum un atributo id #f seguido
@@ -7,7 +7,7 @@
 	Script ubicado en
 	-Todas las páginas
 
-========================================================*/
+###########################################################*/
 $(document).ready(function(e) {
 	$('.forum').each(function(index, element) {
 		var url = $(this).find('.url-forum').attr('href');

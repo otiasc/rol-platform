@@ -1,5 +1,5 @@
-<section  class="container-12">
-  <div id="breadcrumb" class="grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> {NAV_CAT_DESC}&nbsp;&raquo;&nbsp; <strong>{L_NEW_OR_EDIT_POST}</strong> </div>
+<section class="section-toolbar container-12">
+  <nav class="breadcrumb"> <a href="{U_INDEX}">{L_INDEX}</a> {NAV_CAT_DESC}&nbsp;&raquo;&nbsp; <strong>{L_NEW_OR_EDIT_POST}</strong> </nav>
   <!-- BEGIN switch_user_logged_in -->
   <div class="toolbar grid-6">
     <ul>
@@ -9,140 +9,202 @@
       <li><a href="{U_MARK_READ}">Marcar todos como leídos<!--{L_MARK_FORUMS_READ}--></a></li>
     </ul>
   </div>
-  <!-- END switch_user_logged_in --> 
+  <!-- END switch_user_logged_in -->
+  <br class="clearfloat">
 </section>
 {ERROR_BOX}
-<form action="{S_POST_ACTION}" method="post" name="post" enctype="multipart/form-data">
-  <!-- BEGIN switch_forum_rules -->
-  <section id="post-forum-rules" class="container-12">
-    <h2>Normas del foro</h2>
-    <p>{RULE_MSG}</p>
-  </section>
-  <!-- END switch_forum_rules --> 
-  <!----
-  
-  ----->
-  <section id="post-form1" class="container-12">
-    <h2><!-- BEGIN switch_post_a -->{L_POST_A}<!-- END switch_post_a --></h2>
-    <dl>
-      <!-- BEGIN switch_username_select -->
-      <dt>
-        <label>{L_USERNAME}</label>
-      </dt>
-      <dd>
-        <input type="text" name="username"  maxlength="8" value="{USERNAME}" />
-      </dd>
-      <!-- END switch_username_select --> 
-      <!-- BEGIN switch_reasons -->
-      <dt>
-        <label>{L_REASON}</label>
-      </dt>
-      <dd>{REASON_NEW}</dd>
-      <!-- END switch_reasons -->
-    </dl>
-    
-    <!-- BEGIN switch_privmsg -->
-    <dl>
-      <dt>
-        <label>{L_USERNAME}</label>
-      </dt>
-      <dd> 
-        <!-- BEGIN switch_username -->
-        <input style="margin-top:2px" type="text" name="username[]" value="{switch_privmsg.switch_username.USERNAME}" />
-        <br />
-        <!-- END switch_username -->
-        <input style="margin-top:2px" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" />
-        &nbsp; <img id="add_username" src="{ADD_USERNAME_IMG}" class="selectHover" alt="" />&nbsp;
-        <input type="button" id="find_user" value="{L_FIND_USERNAME}" />
-      </dd>
-      <!-- BEGIN switch_privmsg_friend -->
-      <dt>
-        <label>{switch_privmsg.switch_privmsg_friend.L_OR_FRIEND}</label>
-      </dt>
-      <dd>{switch_privmsg.switch_privmsg_friend.FRIEND_PM}</dd>
-      <!-- END switch_privmsg_friend --> 
-      <!-- BEGIN switch_privmsg_group -->
-      <dt>
-        <label>{switch_privmsg.switch_privmsg_group.L_OR_GROUP}</label>
-      </dt>
-      <dd>{switch_privmsg.switch_privmsg_group.MASS_PM}</dd>
-      <!-- END switch_privmsg_group --> 
-      <!-- END switch_privmsg -->
-    </dl>
-    <dl>
-      <!-- BEGIN switch_icon_checkbox -->
-      <dt style="padding-top:14px">
-        <label>{L_ICON_TITLE}</label>
-      </dt>
-      <dd> 
-        <!-- BEGIN row --> 
-        <!-- BEGIN cell -->
-        <label style="vertical-align:bottom">
-          <input type="radio" name="post_icon" tabindex="2" value="{switch_icon_checkbox.row.cell.ICON_ID}" {switch_icon_checkbox.row.cell.ICON_CHECKED} id="post_icon_{switch_icon_checkbox.row.cell.ICON_ID}" />
-          &nbsp; <span onclick="document.forms['post'].post_icon_{switch_icon_checkbox.row.cell.ICON_ID}.checked=true">{switch_icon_checkbox.row.cell.ICON_IMG}</span> </label>
-        &nbsp; 
-        <!-- END cell --> 
-        <!-- END row --> 
-      </dd>
-      <!-- END switch_icon_checkbox --> 
-      <!-- BEGIN switch_subject -->
-      <dt>
-        <label>{L_SUBJECT}</label>
-      </dt>
-      <dd class="frm-input">
-        <input type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" />
-        
-        <!-- BEGIN switch_subject_color --> 
-        <script type="text/javascript">
+
+{POST_PREVIEW_BOX} 
+<!-- BEGIN switch_forum_rules -->
+<section class="section-forum-rules container-12">
+  <h2>Normas del foro</h2>
+  <p>{RULE_MSG}</p>
+</section>
+<!-- END switch_forum_rules -->
+
+<section class="section-post-post">
+  <h2><!-- BEGIN switch_post_a -->{L_POST_A}<!-- END switch_post_a --></h2>
+  <form action="{S_POST_ACTION}" method="post" name="post" enctype="multipart/form-data">
+    <aside>
+      <dl>
+        <!-- BEGIN switch_username_select -->
+        <dt>
+          <label>{L_USERNAME}</label>
+        </dt>
+        <dd>
+          <input type="text" name="username"  maxlength="8" value="{USERNAME}" />
+        </dd>
+        <!-- END switch_username_select --> 
+        <!-- BEGIN switch_reasons -->
+        <dt>
+          <label>{L_REASON}</label>
+        </dt>
+        <dd>{REASON_NEW}</dd>
+        <!-- END switch_reasons -->
+      </dl>
+      
+      <!-- BEGIN switch_privmsg -->
+      <dl>
+        <dt>
+          <label>{L_USERNAME}</label>
+        </dt>
+        <dd> 
+          <!-- BEGIN switch_username -->
+          <input style="margin-top:2px" type="text" name="username[]" value="{switch_privmsg.switch_username.USERNAME}" />
+          <br />
+          <!-- END switch_username -->
+          <input style="margin-top:2px" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" />
+          &nbsp; <img id="add_username" src="{ADD_USERNAME_IMG}" class="selectHover" alt="" />&nbsp;
+          <input type="button" id="find_user" value="{L_FIND_USERNAME}" />
+        </dd>
+        <!-- BEGIN switch_privmsg_friend -->
+        <dt>
+          <label>{switch_privmsg.switch_privmsg_friend.L_OR_FRIEND}</label>
+        </dt>
+        <dd>{switch_privmsg.switch_privmsg_friend.FRIEND_PM}</dd>
+        <!-- END switch_privmsg_friend --> 
+        <!-- BEGIN switch_privmsg_group -->
+        <dt>
+          <label>{switch_privmsg.switch_privmsg_group.L_OR_GROUP}</label>
+        </dt>
+        <dd>{switch_privmsg.switch_privmsg_group.MASS_PM}</dd>
+        <!-- END switch_privmsg_group --> 
+        <!-- END switch_privmsg -->
+      </dl>
+      <dl>
+        <dt>Opciones</dt>
+        <dd>
+          <ul>
+            <!-- BEGIN switch_html_checkbox -->
+            <li>
+              <label>
+                <input type="checkbox" name="disable_html"{S_HTML_CHECKED}>
+                &nbsp;{L_DISABLE_HTML}</label>
+            </li>
+            <!-- END switch_html_checkbox --> 
+            <!-- BEGIN switch_bbcode_checkbox -->
+            <li>
+              <label>
+                <input type="checkbox" name="disable_bbcode"{S_BBCODE_CHECKED}>
+                &nbsp;{L_DISABLE_BBCODE}</label>
+            </li>
+            <!-- END switch_bbcode_checkbox --> 
+            
+            <!-- BEGIN switch_smilies_checkbox -->
+            <li>
+              <label>
+                <input type="checkbox" name="disable_smilies"{S_SMILIES_CHECKED}>
+                &nbsp;{L_DISABLE_SMILIES}</label>
+            </li>
+            <!-- END switch_smilies_checkbox --> 
+            
+            <!-- BEGIN switch_signature_checkbox -->
+            <li>
+              <label>
+                <input type="checkbox" name="attach_sig"{S_SIGNATURE_CHECKED}>
+                &nbsp;{L_ATTACH_SIGNATURE}</label>
+            </li>
+            <!-- END switch_signature_checkbox --> 
+            
+            <!-- BEGIN switch_notify_checkbox -->
+            <li>
+              <label>
+                <input type="checkbox" name="notify"{S_NOTIFY_CHECKED}>
+                &nbsp;{L_NOTIFY_ON_REPLY}</label>
+            </li>
+            <!-- END switch_notify_checkbox --> 
+            
+            <!-- BEGIN switch_delete_checkbox -->
+            <li>
+              <label>
+                <input type="checkbox" name="delete" />
+                &nbsp;{L_DELETE_POST}</label>
+            </li>
+            <!-- END switch_delete_checkbox --> 
+            
+            <!-- BEGIN switch_type_toggle --> 
+            {S_TYPE_TOGGLE} 
+            <!-- END switch_type_toggle -->
+          </ul>
+        </dd>
+      </dl>
+    </aside>
+    <article>
+      <dl>
+        <!-- BEGIN switch_icon_checkbox -->
+        <dt style="padding-top:14px">
+          <label>{L_ICON_TITLE}</label>
+        </dt>
+        <dd> 
+          <!-- BEGIN row --> 
+          <!-- BEGIN cell -->
+          <label style="vertical-align:bottom">
+            <input type="radio" name="post_icon" tabindex="2" value="{switch_icon_checkbox.row.cell.ICON_ID}" {switch_icon_checkbox.row.cell.ICON_CHECKED} id="post_icon_{switch_icon_checkbox.row.cell.ICON_ID}" />
+            &nbsp; <span onclick="document.forms['post'].post_icon_{switch_icon_checkbox.row.cell.ICON_ID}.checked=true">{switch_icon_checkbox.row.cell.ICON_IMG}</span> </label>
+          &nbsp; 
+          <!-- END cell --> 
+          <!-- END row --> 
+        </dd>
+        <!-- END switch_icon_checkbox --> 
+        <!-- BEGIN switch_subject -->
+        <dt>
+          <label>{L_SUBJECT}</label>
+        </dt>
+        <dd class="frm-input">
+          <input type="text" name="subject" value="{SUBJECT}" maxlength="{TOPIC_TITLE_MAXLENGTH}" title="{TOPIC_TITLE_LENGTH_EXPLAIN}" onkeypress="if (event.keyCode==13){return false}" />
+          
+          <!-- BEGIN switch_subject_color --> 
+          <script type="text/javascript">
 //<![CDATA[
 input = document.getElementsByName('subject');
 //]]>
 		</script>
-        <select name="topic_color" onchange="input[0].style.color = topic_color.value" style="margin-left:10px">
+          <select name="topic_color" onchange="input[0].style.color = topic_color.value" style="margin-left:10px">
+            
+            
+            
+            
+             {switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_OPTIONS}
+        
           
           
           
-          {switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_OPTIONS}
-        
-        
-        
-        </select>
-        <script type="text/javascript">
+          
+          </select>
+          <script type="text/javascript">
 //<![CDATA[
 input[0].style.color = '{switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_DEFAULT}';
 //]]>
 </script> 
-        <!-- END switch_subject_color --> 
-      </dd>
-      <!-- END switch_subject -->
-    </dl>
-    <dl>
-      <!-- BEGIN switch_description -->
-      <dt>
-        <label>{L_DESCRIPTION}</label>
-      </dt>
-      <dd class="frm-input">
-        <input type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
-      </dd>
-      <!-- END switch_description -->
-    </dl>
-  </section>
-  <section id="post-form-message" class="container-12">
-    <textarea id="message" onclick="storeCaret(this)" rows="15" cols="9" onkeyup="storeCaret(this)" name="message" tabindex="3" onselect="storeCaret(this)" wrap="virtual" style="width:98%">{MESSAGE}</textarea>
-    <script>
-				/*
-				Replace the <textarea id="editor"> with an CKEditor
-				instance, using the "bbcode" plugin, shaping some of the
-				editor configuration to fit BBCode environment.
-				*/
+          <!-- END switch_subject_color --> 
+        </dd>
+        <!-- END switch_subject -->
+      </dl>
+      <dl>
+        <!-- BEGIN switch_description -->
+        <dt>
+          <label>{L_DESCRIPTION}</label>
+        </dt>
+        <dd>
+          <input type="text" name="description" value="{DESCRIPTION}" maxlength="{TOPIC_DESCRIPTION_MAXLENGTH}" onkeypress="if (event.keyCode==13){return false}" />
+        </dd>
+        <!-- END switch_description -->
+      </dl>
+      <textarea id="message" rows="15" cols="9" name="message" tabindex="3">{MESSAGE}</textarea>
+      <script>
 				CKEDITOR.replace( 'message', {
-					extraPlugins: 'bbcode',
+					extraPlugins: 'bbcode,sourcearea,autogrow',
+					
+					uiColor:'#000000',
+					resize_enabled: false,
+					autoGrow_minHeight:0,
+					autoGrow_onStartup:true,
 					/* Remove unused plugins. */
-					removePlugins: 'bidi,dialogadvtab,div,filebrowser,flash,format,forms,horizontalrule,iframe,justify,liststyle,pagebreak,showborders,stylescombo,table,tabletools,templates',
+					removePlugins: 'bidi,dialogadvtab,div,filebrowser,flash,format,forms,horizontalrule,iframe,justify,liststyle,pagebreak,showborders,stylescombo,table,tabletools,templates,elementspath',
 					/* Width and height are not supported in the BBCode format, so object resizing is disabled. */
 					disableObjectResizing: true,
 					/* Define font sizes in percent values. */
-					fontSize_sizes: "30/30%;50/50%;100/100%;120/120%;150/150%;200/200%;300/300%",
+					fontSize_sizes: "7/7px;9/9px;12/12px;24/24px",
 					toolbar: [
 						[ 'Source', '-', 'Save', 'NewPage', '-', 'Undo', 'Redo' ],
 						[ 'Find', 'Replace', '-', 'SelectAll', 'RemoveFormat' ],
@@ -166,56 +228,47 @@ input[0].style.color = '{switch_subject.switch_subject_color.TOPIC_TITLE_COLOR_D
 					]
 				});
 
-    </script> 
-  </section>
-  <section id="post-form2" class="container-12">
-    <dl>
-      <!-- BEGIN edit_reason -->
-      <dt>
-        <label><span style="font-size:11px">{edit_reason.L_EDIT_REASON}</span></label>
-      </dt>
-      <dd>
-        <input class="inputbox medium" style="width:63%" type="text" name="edit_reason" value="{edit_reason.EDIT_REASON}" maxlength="255">
-      </dd>
-      <!-- END edit_reason -->
-    </dl>
-    <div>{S_HIDDEN_FORM_FIELDS}</div>
-  </section>
-  <section class="container-12 bottom-buttonset">
-    <input type="hidden" name="lt" value="{LAST_TOPIC_ID}" />
-    <ul>
-      <!-- BEGIN switch_preview -->
-      <li>
-        <input type="submit" name="preview" value="{L_PREVIEW}" tabindex="5" />
-      </li>
-      <!-- END switch_preview --> 
-      
-      <!-- BEGIN switch_draft -->
-      <li>
-        <input type="submit" name="draft" value="{L_DRAFT}" tabindex="7" accesskey="d" />
-      </li>
-      <!-- END switch_draft --> 
-      
-      <!-- BEGIN switch_publish -->
-      <li>
-        <input type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p" />
-      </li>
-      <!-- END switch_publish -->
-      
-      <li>
-        <input type="submit" name="post" value="{L_SUBMIT}" tabindex="6" accesskey="s" />
-      </li>
-    </ul>
-  </section>
-</form>
-
-<!----
-
-
-
-
-
-
-
-
------>
+      </script> 
+    </article>
+    <fieldset class="post-form-2">
+      <dl>
+        <!-- BEGIN edit_reason -->
+        <dt>
+          <label>{edit_reason.L_EDIT_REASON}</label>
+        </dt>
+        <dd>
+          <input class="inputbox medium" style="width:63%" type="text" name="edit_reason" value="{edit_reason.EDIT_REASON}" maxlength="255">
+        </dd>
+        <!-- END edit_reason -->
+      </dl>
+      {S_HIDDEN_FORM_FIELDS}
+    </fieldset>
+    <section class="section-form-submit section-buttonset">
+      <input type="hidden" name="lt" value="{LAST_TOPIC_ID}" />
+      <ul>
+        <!-- BEGIN switch_preview -->
+        <li>
+          <input type="submit" name="preview" value="{L_PREVIEW}" tabindex="5">
+        </li>
+        <!-- END switch_preview --> 
+        
+        <!-- BEGIN switch_draft -->
+        <li>
+          <input type="submit" name="draft" value="{L_DRAFT}" tabindex="7" accesskey="d">
+        </li>
+        <!-- END switch_draft --> 
+        
+        <!-- BEGIN switch_publish -->
+        <li>
+          <input type="submit" name="publish" value="{L_PUBLISH}" tabindex="8" accesskey="p">
+        </li>
+        <!-- END switch_publish -->
+        
+        <li>
+          <input type="submit" name="post" value="{L_SUBMIT}" tabindex="6" accesskey="s">
+        </li>
+      </ul>
+    </section>
+  </form>
+</section>
+{TOPIC_REVIEW_BOX} 

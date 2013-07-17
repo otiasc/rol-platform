@@ -5,26 +5,22 @@
     <ul>
       <li><a href="{U_SEARCH_NEW}">Mensajes nuevos<!--{L_SEARCH_NEW}--></a></li>
       <li><a href="{U_SEARCH_SELF}">Tus mensajes <!--{L_SEARCH_SELF}--></a></li>
-      <!--<li><a href="{U_SEARCH_UNANSWERED}">Sin respuesta{L_SEARCH_UNANSWERED}</a></li>-->
+      <li><a href="{U_SEARCH_UNANSWERED}">Temas sin respuesta</a></li>
       <li><a href="{U_MARK_READ}">Marcar todos como leídos<!--{L_MARK_FORUMS_READ}--></a></li>
     </ul>
-  </div>
-  <!-- END switch_user_logged_in -->
-</section>
-
-<section class="section-toolbar container-12">
-  <div class="toolbar grid-12">
+    <!-- END switch_user_logged_in -->
     <ul>
       <!-- BEGIN switch_user_authpost -->
-      <li><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow">{L_POST_NEW_TOPIC}</a></li>
+      <li><a href="{U_POST_NEW_TOPIC}" accesskey="n" rel="nofollow" class="button">{L_POST_NEW_TOPIC}</a></li>
       <!-- END switch_user_authpost -->
+      
       <!-- BEGIN switch_user_authreply -->
-      <li><a href="{U_POST_REPLY_TOPIC}">{L_POST_REPLY_TOPIC}</a></li>
+      <li><a href="{U_POST_REPLY_TOPIC}" class="big-button">{L_POST_REPLY_TOPIC}</a></li>
       <!-- END switch_user_authreply -->
     </ul>
   </div>
-  <br class="clearfloat" />
 </section>
+
 
 {POLL_DISPLAY}
 
@@ -52,21 +48,20 @@
         
         <div>{postrow.displayed.POSTER_RPG}</div>
       </aside>
+      <div class="post-tools">
+        <ul>
+          <li>{postrow.displayed.THANK_IMG}</li>
+          <!--<li>{postrow.displayed.MULTIQUOTE_IMG}</li>-->
+          <li>{postrow.displayed.QUOTE_IMG}</li>
+          <li>{postrow.displayed.EDIT_IMG}</li>
+          <li>{postrow.displayed.DELETE_IMG}</li>
+          <li>{postrow.displayed.IP_IMG}</li>
+          <li>{postrow.displayed.REPORT_IMG}</li>
+        </ul>
+      </div>
       <article class="grid-9">
-        <div class="post-tools">
-          <ul>
-            <li>{postrow.displayed.THANK_IMG}</li>
-            <!--<li>{postrow.displayed.MULTIQUOTE_IMG}</li>-->
-            <li>{postrow.displayed.QUOTE_IMG}</li>
-            <li>{postrow.displayed.EDIT_IMG}</li>
-            <li>{postrow.displayed.DELETE_IMG}</li>
-            <li>{postrow.displayed.IP_IMG}</li>
-            <li>{postrow.displayed.REPORT_IMG}</li>
-          </ul>
-        </div>
-        <div class="date"><a href="{postrow.displayed.POST_URL}" class="url-post">{postrow.displayed.POST_DATE_NEW}</a></div>
         <div class="message">{postrow.displayed.MESSAGE}</div>
-        
+        <div class="date">{postrow.displayed.POSTER_NAME}, <a href="{postrow.displayed.POST_URL}" class="url-post">{postrow.displayed.POST_DATE_NEW}</a></div>
       </article>
       <br class="clearfloat" />
     </li>

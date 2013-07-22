@@ -22,5 +22,7 @@ function setForumClass() {
 		var forumClass = forumArray[i].split('|')[1];
 		
 		$('#f' + forumId).addClass(forumClass);
+		$('#f' + forumId).addClass('forum-default');
+		
 	}
 };

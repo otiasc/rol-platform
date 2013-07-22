@@ -1,0 +1,80 @@
+<section class="section-toolbar container-12">
+  <nav class="breadcrumb grid-6"> <a href="{U_INDEX}">{L_INDEX}</a> &nbsp;&raquo;&nbsp;<strong>{L_PM}</strong> </nav>
+  <!-- BEGIN switch_user_logged_in -->
+  <div class="toolbar grid-6">
+    <ul>
+      <li><a href="{U_SEARCH_NEW}">Mensajes nuevos<!--{L_SEARCH_NEW}--></a></li>
+      <li><a href="{U_SEARCH_SELF}">Tus mensajes <!--{L_SEARCH_SELF}--></a></li>
+    </ul>
+    <ul>
+      <li><a href="/privmsg?mode=post" class="big-button">Nuevo mensaje privado</a></li>
+    </ul>
+  </div>
+  <!-- END switch_user_logged_in -->
+</section>
+<section>
+  <aside class="ucp-tabs">
+    <ul>
+      <li>{INBOX_IMG} {INBOX}</li>
+      <li>{SENTBOX_IMG} {SENTBOX}</li>
+      <li>{OUTBOX_IMG} {OUTBOX}</li>
+      <li>{SAVEBOX_IMG} {SAVEBOX}</li>
+    </ul>
+    
+    
+  </aside>
+  <form action="{S_PRIVMSGS_ACTION}" method="post" name="privmsg_list" class="ucp-form">
+    <fieldset>
+      <dl>
+        <dt>{L_DISPLAY_MESSAGES}</dt>
+        <dd>
+          <select name="msgdays">
+            {S_SELECT_MSG_DAYS}
+          </select>
+          <input type="submit" name="submit_msgdays" value="{L_GO}">
+        </dd>
+      </dl>
+    </fieldset>
+    <ul class="privmsgs-list">
+      <!-- BEGIN listrow -->
+      <li class="privmsg">
+        <div class="msj-check">
+          <input type="checkbox" name="mark[]2" value="{listrow.S_MARK_ID}">
+        </div>
+        <div class="msj-title">
+          <h4><a href="{listrow.U_READ}" class="topictitle">
+            <div class="icon"><img src="{listrow.PRIVMSG_FOLDER_IMG}" alt="" />{listrow.PRIVMSG_ICON}</div>
+            {listrow.SUBJECT}</a></h4>
+          <div class="text-author">{listrow.L_BY} {listrow.FROM}</div>
+        </div>
+        <div class="msj-last-post">{listrow.DATE}</div>
+      </li>
+      <!-- END listrow --> 
+      <!-- BEGIN switch_no_messages -->
+      <li>
+        <h4>No hay mensajes</h4>
+      </li>
+      <!-- END switch_no_messages -->
+    </ul>
+    <section class="section-form-submit section-buttonset">
+      <ul>
+        <!-- BEGIN switch_save -->
+        <li>
+          <input type="submit" name="save" value="{L_SAVE_MARKED}">
+        </li>
+        <!-- END switch_save --> 
+        <!-- BEGIN switch_move_profile -->
+        <li>
+          <input type="submit" name="moveprofile" value="{L_MOVE_PROFILE_MARKED}">
+        </li>
+        <!-- END switch_move_profile -->
+        <li>
+          <input type="submit" name="delete" value="{L_DELETE_MARKED}">
+        </li>
+        <li>
+          <input type="submit" name="deleteall" value="{L_DELETE_ALL}">
+        </li>
+      </ul>
+    </section>
+  </form>
+</section>

@@ -317,6 +317,11 @@ a.small-button:active {
 
 ==================================================*/
 
+.icon {
+  height:1em;
+  vertical-align:middle;
+}
+
 /*###########################################################
   
   
@@ -663,22 +668,74 @@ section {
 .section-forums-in-category h2 {
   padding:0 10px;
 }
+
 .section-forums-in-category .forums {
   padding:0;
   margin:0;
   list-style:none;
 }
 .section-forums-in-category .forum {
-  margin:0;
-  padding:0 10px;
+  margin:0 10px 20px 10px;
+  padding:0;
 }
 
-.section-forums-in-category .forum h3 a {
+.section-forums-in-category .forum a * {
+  color:#999;
+}
+.section-forums-in-category .forum a:hover * {
+  color:#999;
+  opacity:0.8;
+}
+
+
+/*-----------------------------------------------
+  forum-default
+  Opción 0. Foros sin formato
+-----------------------------------------------*/
+.forum-default h3 a {
   vertical-align:middle;
 }
-.section-forums-in-category .forum .icon {
-  height:1em;
-  vertical-align:middle;
+
+
+@media all and (min-width:780px) {
+.forum-default .forum-title {
+  float:left;
+  width:520px;
+}
+.forum-default .forum-numbers {
+  float:left;
+  width:40px;
+}
+.forum-default .forum-last-post {
+  float:left;
+  width:100px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.forum-default .forum-title {
+  width:700px;
+}
+.forum-default .forum-numbers {
+  width:60px;
+}
+.forum-default .forum-last-post {
+  width:140px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.forum-default .forum-title {
+  width:880px;
+}
+.forum-default .forum-numbers {
+  width:80px;
+}
+.forum-default .forum-last-post {
+  width:180px;
+}
 }
 
 /*-----------------------------------------------
@@ -689,9 +746,8 @@ section {
   display:inline-block;
 }
 .forum-only-title .description,
-.forum-only-title .number-threads,
-.forum-only-title .number-posts,
-.forum-only-title .lastest-post {
+.forum-only-title .forum-numbers,
+.forum-only-title .forum-last-post {
   display:none;
 }
 
@@ -704,7 +760,7 @@ section {
 
 .forum-tall-image .description {
   overflow:hidden;
-  font-size:0.769em;
+  font-size:0.846em;
 }
 
 .forum-tall-image .description .image-container {
@@ -724,11 +780,12 @@ section {
 .forum-tall-image {
   float:left;
   width:160px;
-  height:456px;
-  padding:0 10px;
+  height:425px;
+  border-bottom:#333 1px dotted;
 }
 .forum-tall-image .description {
-  height:320px;
+  height:335px;
+  margin:0 0 5px 0;
 }
 .forum-tall-image .description .image-container {
   display:block;
@@ -742,39 +799,124 @@ section {
 @media all and (min-width:980px) {
 .forum-tall-image  {
   width:220px;
-  height:570px;
-  padding:0 10px;
+  height:500px;
 }
 .forum-tall-image .description {
-  height:453px;
+  height:430px;
 }
 }
 
 /* RESPONSIVE 1200gs */
 @media all and (min-width:1280px) {
 .forum-tall-image {
-  width:380px;
-  height:500px;
-  padding:0 10px;
+  width:280px;
+  height:430px;
 }
 .forum-tall-image .description {
-  width:240px;
-  height:450px;
+  width:190px;
+  height:360px;
   padding:0 10px 0 0;
   float:left;
 }
 }
 
+.forum-tall-image .forum-numbers,
 .forum-tall-image .number-threads,
-.forum-tall-image .number-posts {
+.forum-tall-image .number-posts,
+.forum-tall-image .forum-last-post {
   display:inline-block;
   margin:0 10px 0 0;
+}
+
+@media all and (min-width:1280px) {
+.forum-tall-image .forum-numbers,
+.forum-tall-image .number-threads,
+.forum-tall-image .number-posts,
+.forum-tall-image .forum-last-post {
+  display:block;
+}
 }
 
 /*-----------------------------------------------
   forum-wide-image
   Opción 3. Foros que muestran una imagen ancha
 -----------------------------------------------*/
+.forum-wide-image {
+}
+
+.forum-wide-image .description {
+  overflow:hidden;
+  font-size:0.846em;
+}
+
+.forum-wide-image .description .image-container {
+  overflow:hidden;
+  height:0;
+  display:none;
+}
+
+.forum-wide-image .description img {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+}
+
+.forum-wide-image h3 {
+  white-space:nowrap;
+  overflow:hidden;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.forum-wide-image {
+  float:left;
+  width:160px;
+  height:267px;
+  padding:0;
+  border-bottom:#333 1px dotted;
+}
+.forum-wide-image .description {
+  height:160px;
+  margin:0 0 5px 0;
+}
+.forum-wide-image .description .image-container {
+  display:block;
+  height:0;
+  padding:56.25% 0 0 0;
+  position:relative;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.forum-wide-image  {
+  width:220px;
+  height:272px;
+}
+.forum-wide-image .description {
+  height:202px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.forum-wide-image {
+  width:280px;
+  height:276px;
+}
+.forum-wide-image .description {
+  height:224px;
+}
+}
+
+.forum-wide-image .forum-numbers,
+.forum-wide-image .number-threads,
+.forum-wide-image .number-posts,
+.forum-wide-image .forum-last-post {
+  display:inline-block;
+  margin:0 10px 0 0;
+}
+
 
 /*==================================================
 
@@ -1268,4 +1410,15 @@ li.post article .date {
 .section-post-post article {
   width:700px;
 }
+}
+
+
+/*==================================================
+
+  Sección admin-message
+  Mensaje del administrador en el índice
+
+==================================================*/
+.section-admin-message {
+  padding:10px;
 }

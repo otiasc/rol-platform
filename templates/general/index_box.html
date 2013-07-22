@@ -6,13 +6,18 @@
   <ul class="forums">
     <!-- END tablehead --> 
     <!-- BEGIN forumrow -->
-    <li class="forum grid-3">
-      <h3> <img class="icon" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" /> <a href="{catrow.forumrow.U_VIEWFORUM}" class="url-forum">{catrow.forumrow.FORUM_NAME}</a></h3>
-      <div class="description"> {catrow.forumrow.FORUM_DESC} </div>
-      <div class="number-threads"><img src="imgs/icon-threads.png" title="Temas:" /> {catrow.forumrow.TOPICS}</div>
-      <div class="number-posts"><img src="imgs/icon-posts.png" title="Mensajes:" /> {catrow.forumrow.POSTS} </div>
-      <div class="lastest-post"><!-- BEGIN switch_topic_title --> Último tema: <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><!-- END switch_topic_title --> 
+    <li class="forum forum-default">
+      <div class="forum-title"> <a href="{catrow.forumrow.U_VIEWFORUM}" class="url-forum">
+        <h3> <img class="icon" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="{catrow.forumrow.L_FORUM_FOLDER_ALT}" /> {catrow.forumrow.FORUM_NAME}</h3>
+        <div class="description"> {catrow.forumrow.FORUM_DESC} </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> {catrow.forumrow.TOPICS}</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> {catrow.forumrow.POSTS} </div>
       </div>
+      <div class="forum-last-post"><!-- BEGIN switch_topic_title --> Último tema: <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><!-- END switch_topic_title --> 
+      </div>
+      <br class="clearfloat">
     </li>
     <!-- END forumrow --> 
     <!-- BEGIN tablefoot --> 

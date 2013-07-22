@@ -1422,3 +1422,47 @@ li.post article .date {
 .section-admin-message {
   padding:10px;
 }
+
+
+
+/*==================================================
+
+  Sección especial registro
+  Página de registro que no funciona con plantilla PUNBB
+
+==================================================*/
+#pun-visit {
+  display:none;
+}
+.main {
+  background:#000;
+  float:none;
+  clear:both;
+  
+  padding:10px 0 20px 0;
+  
+  text-align:left;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.main {
+  width:720px;
+  
+  margin:0 auto;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.main {
+  width:960px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.main {
+  width:1200px;
+}
+}

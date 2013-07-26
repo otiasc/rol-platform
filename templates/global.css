@@ -1,393 +1,1542 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Titillium+Web:100,400,700);
+@import "http://fonts.googleapis.com/css?family=News+Cycle:400,700|Roboto:100,300";
 /*###########################################################
-
-
-    Aspectos generales
-
-
+  
+  
+  Aspectos generales
+	
+  
 ###########################################################*/
 
 /*==================================================
 
-	Formato de etiquetas sin clases
+	Formatos de texto
 
 ==================================================*/
 
-/*------------------------------
-
-	Etiquetas html, body
-
-------------------------------*/
+/*-----------------------------------------------
+	Reset
+-----------------------------------------------*/
 html {
-  font-family:'Titillium Web';
-  font-size:0.813em;
+  font-family:'News Cycle';
+  font-size:0.813em; /* 13px */
   font-weight:400;
 }
 body {
-  text-align:center;
+  color:#999;
+  background:#000;
+  padding:0;
+  margin:0;
 }
 
-/*------------------------------
-
-	Párrafos
-
-------------------------------*/
+/*-----------------------------------------------
+  Headings y párrafos
+-----------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family:Roboto;
+}
 h1 {
-  font-weight:700;
+  color:#CCC;
+  font-weight:300;
   font-size:2.923em;
-  margin:0.5em 0 0 0;
+  margin:0;
+  padding:0.5em 0 0 0;
+}
+h2 {
+  color:#CCC;
+  font-weight:300;
+  font-size:1.846em;
+  margin:0;
+  padding:0.5em 0 0 0;
+}
+h3 {
+  color:#CCC;
+  font-weight:300;
+  font-size:1.17em;
+  margin:0;
+  padding:0.5em 0 0 0;
+}
+h4 {
+  color:#CCC;
+  font-weight:300;
+  font-size:1.154em;
+  margin:0;
+  padding:0.5em 0 0 0;
+}
+h5 {
+  color:#CCC;
+  font-weight:300;
+  font-size:1em;
+}
+h6 {
+  font-weight:300;
+  font-size:1em;
+}
+h1.with-padding,
+h2.with-padding,
+h3.with-padding,
+h4.with-padding,
+h5.with-padding,
+h6.with-padding {
+  padding-left:10px;
+  padding-right:10px;
 }
 p {
   margin:0.5em 0;
 }
+article {
+  max-width:700px;
+  padding:10px;
+}
 
-/*------------------------------
-
-	Textos no párrafo
-
-------------------------------*/
+/*-----------------------------------------------
+  Enlaces e imágenes
+-----------------------------------------------*/
 a {
-  color:#FF2800;
+  color:#FFF;
   text-decoration:none;
 }
 a:hover {
-  color:#000000;
-  text-decoration:none;
+  color:#999;
+}
+img {
+
+}
+a img {
+  border:none;
 }
 
-/*------------------------------
+/*-----------------------------------------------
+  Otros
+-----------------------------------------------*/
+.clearfloat {
+  float: none;
+  clear: both;
+  font-size: 1px;
+}
 
-	Listas
-
-------------------------------*/
+/*-----------------------------------------------
+  Listas
+-----------------------------------------------*/
 ul {
+  list-style:none;
   padding:0;
   margin:0;
-  list-style:none;
 }
 li {
   padding:0;
   margin:0;
 }
 
-/*------------------------------
+/*==================================================
 
-	Elementos de formulario
+  Formularios
 
-------------------------------*/
+==================================================*/
+/*-----------------------------------------------
+  Fuera de fiedset
+-----------------------------------------------*/
+dt {
+  margin:0;
+  padding:10px 0 0 0;
+  font-weight:700;
+}
+
+dd {
+  margin:0;
+  padding:0;
+}
+/*-----------------------------------------------
+  Fieldset
+-----------------------------------------------*/
+fieldset {
+  border:none;
+  margin:0;
+  padding:0;
+}
+fieldset dt {
+  margin:0;
+  padding:0;
+}
+fieldset dd {
+  margin:0;
+  padding:0 0 20px 0;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+fieldset dt {
+  float:left;
+  width:160px;
+  text-align:right;
+  padding:0 10px;
+}
+fieldset dd {
+  float:left;
+  width:400px;
+  padding:0 10px 20px 10px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+fieldset dt {
+  width:220px;
+}
+fieldset dd {
+  width:540px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+fieldset dt {
+  width:280px;
+}
+fieldset dd {
+  width:680px;
+}
+}
+
+fieldset dd ul {
+  padding:0;
+  margin:0;
+}
+fieldset dd li {
+  padding:0;
+  margin:0 10px 0 0;
+  display:inline-block;
+}
+
+/*-----------------------------------------------
+  Inputs
+-----------------------------------------------*/
+
+input,
+textarea,
+a.button,
+a.big-button,
+a.small-button,
+select {
+  display:inline-block;
+  vertical-align:middle;
+  height: 1.308em; /* 16px */
+  
+  font-size:1em;
+  font-family:'Roboto';
+  
+  text-decoration:none;
+  
+  padding: 3px 10px;
+  box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  -o-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  border:none;
+  box-shadow:#AAA 0px 3px 14px -3px;
+  outline:none;
+  
+  color:#999;
+  background: #000;
+  
+  transition:box-shadow 0.3s;
+  -webkit-transition:box-shadow 0.3s;
+}
+
+input:hover,
+textarea:hover,
+a.button:hover,
+select:hover {
+  box-shadow:#FFF 0px 3px 14px -3px;
+}
+
+input:focus,
+textarea:focus,
+input:active,
+a.button:focus,
+a.button:active,
+select:focus,
+select:active {
+  box-shadow:rgb(0, 184, 255) 0px 3px 16px -1px;
+}
+
+input[disabled] {
+  color:#333;
+  box-shadow:#777 0px 3px 14px -3px;
+}
+
+/*-----------------------------------------------
+  Botones normales
+-----------------------------------------------*/
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+a.button,
+a.big-button {
+  border-radius: 5px;
+}
+
+/*-----------------------------------------------
+  Botones grandes
+-----------------------------------------------*/
+input.big-button,
+a.big-button {
+  text-transform:uppercase;
+  font-weight:700;
+}
+input.big-button:hover,
+a.big-button:hover {
+  box-shadow:#FFF 0px 4px 20px 0px;
+}
+input.big-button:focus,
+input.big-button:active,
+a.big-button:active {
+  box-shadow:rgb(0, 184, 255) 0px 4px 20px 0px;
+}
+
+/*-----------------------------------------------
+  Botones pequeños
+-----------------------------------------------*/
+input.small-button,
+a.small-button {
+  box-shadow:#AAA 0px 0px 14px -3px;
+}
+input.small-button:hover,
+a.small-button:hover {
+  box-shadow:#FFF 0px 0px 14px -3px;
+}
+input.small-button:focus,
+input.small-button:active,
+a.small-button:active {
+  box-shadow:rgb(0, 184, 255) 0px 0px 20px 0px;
+}
 
 /*==================================================
 
-    Responsive design
+  Elementos concretos
 
 ==================================================*/
 
-/*-------------------------------------
-
-	Mobile & Tablet > general
-
--------------------------------------*/
-.container-12 {
-  padding:0 10px;
-  text-align:left;
-  float:none;
-  clear:both;
+.icon {
+  height:1em;
+  vertical-align:middle;
 }
 
-
-/*-------------------------------------
-
-	Grid system > general
-
--------------------------------------*/
-@media all and (min-width:780px) and (min-device-width:780px) {
-.container-12 {
-  padding:0;
-  margin:0 auto;
+.rank img {
+  max-width:100%;
 }
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
-  float:left;
-  padding:0 10px;
-}
-}
-
-/*-------------------------------------
-
-	720gs
-
--------------------------------------*/
-@media all and (min-width:780px) and (min-device-width:780px) {
-.container-12 {
-  width:720px;
-}
-.grid-1  {width:40px;}
-.grid-2  {width:100px;}
-.grid-3  {width:160px;}
-.grid-4  {width:220px;}
-.grid-5  {width:280px;}
-.grid-6  {width:340px;}
-.grid-7  {width:400px;}
-.grid-8  {width:460px;}
-.grid-9  {width:520px;}
-.grid-10 {width:580px;}
-.grid-11 {width:640px;}
-.grid-12 {width:700px;}
-}
-
-
-/*-------------------------------------
-
-	960gs
-
--------------------------------------*/
-@media all and (min-width:980px) and (min-device-width:980px) {
-.container-12 {
-  width:960px;
-}
-.grid-1  {width:60px;}
-.grid-2  {width:140px;}
-.grid-3  {width:220px;}
-.grid-4  {width:300px;}
-.grid-5  {width:380px;}
-.grid-6  {width:460px;}
-.grid-7  {width:540px;}
-.grid-8  {width:620px;}
-.grid-9  {width:700px;}
-.grid-10 {width:780px;}
-.grid-11 {width:860px;}
-.grid-12 {width:940px;}
-}
-
-
-/*-------------------------------------
-
-	1200gs
-
--------------------------------------*/
-@media all and (min-width:1280px) and (min-device-width:1280px) {
-.container-12 {
-  width:1200px;
-}
-.grid-1  {width:80px;}
-.grid-2  {width:180px;}
-.grid-3  {width:280px;}
-.grid-4  {width:380px;}
-.grid-5  {width:480px;}
-.grid-6  {width:580px;}
-.grid-7  {width:680px;}
-.grid-8  {width:780px;}
-.grid-9  {width:880px;}
-.grid-10 {width:980px;}
-.grid-11 {width:1080px;}
-.grid-12 {width:1180px;}
-}
-
-
 /*###########################################################
-
-
-    Estructura > Header
-
-
+  
+  
+  Elementos fijos. Headers y footers
+  
+  
 ###########################################################*/
+/*==================================================
+
+  Header
+
+==================================================*/
 header {
-  font-size:1.5em;
+  background:#000 url("http://i34.servimg.com/u/f34/17/38/25/48/fondo210.jpg") no-repeat center top;
+  background-size:cover;
+  color:#FFF;
 }
 header h1 {
-  color:#FF2800;
+  color:#FFF;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+header {
+  width:720px;
+  
+  padding:20px 0 0 0;
+  margin:0 auto;
+}
 }
 
-/*###########################################################
-
-
-    Estructura > Nav
-
-
-###########################################################*/
-nav#topnav li {
-  display:inline-block;
-  width:160px;
-  height:32px;
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+header {
+  width:960px;
 }
-nav#topnav li a {
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+header {
+  width:1200px;
+}
+}
+
+
+header a#logo {
   display:block;
-  height:16px;
-  padding:8px 0;
+  padding:0 10px;
+  max-height:40px;
+  text-align:center;
 }
-@media all and (min-width:780px) and (min-device-width:780px) {
-nav#topnav li {
+header a#logo img{
+  max-width:100%;
+  max-height:100%;
+}
+header div.title-and-description {
+  padding:0 10px;
+  text-align:left;
+}
+header div.title-and-description h1 {
+  margin:0;
+  font-size:3.077em;
+}
+
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+header a#logo {
+  display:block;
+  float:left;
+  max-height:150px;
+}
+header div.title-and-description {
+  font-size:133%;
+  float:left;
+}
+}
+
+@media all and (min-width:980px) {
+header a#logo {
+}
+}
+@media all and (min-width:1280px) {
+header a#logo {
+}
+}
+
+header nav#topnav {
+  padding:0 10px;
+}
+header nav#topnav ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+header nav#topnav li {
+  margin:0;
+  padding:0;
+  float:left;
+  width:160px;
+}
+@media all and (min-width:780px) {
+header nav#topnav li {
+  display:inline-block;
+  float:none;
   width:auto;
   margin:0 10px 0 0;
 }
 }
 
-
-/*###########################################################
-
-
-    Estructura > Toolbar & Breadcumbs
-
-
-###########################################################*/
-#breadcrumb_toolbar {
-  height:24px;
-  font-size:0.923em;
-}
-#breadcrumb {
-  text-align:left;
-}
-#breadcrumb a {
-  display:inline-block;
+header nav#topnav li a {
+  display:block;
+  width:100%;
   height:16px;
   padding:4px 0;
 }
-#toolbar ul {
-  list-style:none;
-  margin:0;
-  padding:0;
-  text-align:right;
+
+/*==================================================
+
+  Footer
+
+==================================================*/
+
+
+
+/*###########################################################
+  
+  
+  Secciones.
+  Aspectos generales
+  
+  
+###########################################################*/
+section {
+  background:#000;
+  float:none;
+  clear:both;
+  
+  padding:10px 0 20px 0;
+  
+  text-align:left;
 }
-#toolbar li {
-  display:inline-block;
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+section {
+  width:720px;
+  
+  margin:0 auto;
 }
-#toolbar li a {
-  display:inline-block;
-  height:16px;
-  padding:4px;
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+section {
+  width:960px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+section {
+  width:1200px;
+}
 }
 
 
 /*###########################################################
+  
+  
+  Secciones.
+  Barras
+  
+  
+###########################################################*/
+.section-toolbar,
+.section-full-toolbar,
+.section-jumpbox,
+.section-buttonset,
+.section-index-toolbar {
+  padding:0 10px;
+}
+
+/*==================================================
+
+  Sección toolbar
+  Para las barras de herramientas y migas de pan
+  
+  Sección full-toolbar
+  Para barra de herramientas alineada a la derecha
+  (solo barra de herramientas)
+
+==================================================*/
+.section-toolbar,
+.section-full-toolbar {
+  height:auto;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-toolbar,
+.section-full-toolbar {
+  padding:0;
+}
+}
+
+.section-toolbar nav.breadcrumb {
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-toolbar nav.breadcrumb {
+  float:left;
+  width:340px;
+  padding:0 10px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-toolbar nav.breadcrumb {
+  width:460px;
+  padding:0 10px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-toolbar nav.breadcrumb {
+  width:580px;
+  padding:0 10px;
+}
+}
 
 
-    Estructura > Lista de foros en una categoría
-    
-    Sustitúyase .forum-list-option-X por c + ID de las
-    categorías a las que se quiere aplicar la opción
+.section-toolbar div.toolbar {
+  
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-toolbar div.toolbar {
+  float:left;
+  width:340px;
+  padding:0 10px;
+  
+  text-align:right;
+}
+.section-full-toolbar div.toolbar {
+  padding:0 10px;
+  text-align:right;
+}
+}
 
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-toolbar div.toolbar {
+  width:460px;
+  padding:0 10px;
+}
+}
 
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-toolbar div.toolbar {
+  width:580px;
+  padding:0 10px;
+}
+}
+
+.section-toolbar div.toolbar ul,
+.section-full-toolbar div.toolbar ul {
+  list-style:none;
+  padding:0 0 10px 0;
+  margin:0;
+}
+.section-toolbar div.toolbar li,
+.section-full-toolbar div.toolbar li {
+  display:inline-block;
+  padding:0;
+  margin:0 10px 0 0;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-toolbar div.toolbar li
+.section-full-toolbar div.toolbar li {
+  margin:0 0 0 10px;
+}
+}
+
+/*==================================================
+
+  Sección jumpbox
+  Para la jumpbox presente en todas las páginas
+
+==================================================*/
+.section-jumpbox {
+  height:1.846em;
+  padding:10px;
+}
+
+/*==================================================
+
+  Sección buttonset
+  Para las barras con varios botones
+
+==================================================*/
+.section-buttonset {
+  width:auto;
+  padding:10px;
+  
+  text-align:center;
+}
+
+.section-buttonset ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.section-buttonset li {
+  padding:0;
+  margin:0 5px;
+  display:inline-block;
+}
+
+/*###########################################################
+  
+  
+  Secciones.
+  Listas de elementos
+  
+  
 ###########################################################*/
 
 /*==================================================
 
-	Opción 1.
-    - 4 líneas
-     - Imagen oculta en mobile, a proporción 10:17 en resto
-     - Descripción
-     - Posts y mensajes
-     - Último post
+  Sección forums-in-category
+  Lista de foros en una categoría
 
 ==================================================*/
-.forum-list-option-1 {
-  height:auto;
-  border-bottom:#000 1px dotted;
+.section-forums-in-category {
+  
 }
-.forum-list-option-1 .description .image-container {
-  overflow:hidden;
-  height:0;
-  display:none;
-}
-@media all and (min-width:780px) {
-.forum-list-option-1 {
-  height:52em;
-  margin-bottom:2em;
-}
-.forum-list-option-1 .description .image-container {
-  display:block;
-  height:0;
-  padding:170% 0 0 0;
-  position:relative;
-}
-}
-.forum-list-option-1 .description img {
-  position:absolute;
-  left:0;
-  top:0;
-  height:100%;
+.section-forums-in-category h2 {
+  padding:0 10px;
 }
 
-/*==================================================
-
-	Opción 2.
-    - 4 líneas
-     - Imagen oculta en mobile, a proporción 20:17 en resto
-     - Descripción
-     - Subforos, a proporción 20:17 en no mobile
-     - Posts y mensajes
-     - Último post
-
-==================================================*/
-.forum-list-option-2 {
-  height:auto;
-  border-bottom:#000 1px dotted;
+.section-forums-in-category .forums {
+  padding:0;
+  margin:0;
+  list-style:none;
 }
-.forum-list-option-2 .description .image-container {
-  overflow:hidden;
-  height:0;
-  display:none;
-}
-@media all and (min-width:780px) {
-.forum-list-option-2 {
-  height:52em;
-  margin-bottom:2em;
-}
-.forum-list-option-2 .description .image-container {
-  display:block;
-  height:0;
-  padding:85% 0 0 0;
-  position:relative;
-}
-.forum-list-option-2 .description .subforums-container {
-  height:0;
-  padding:85% 0 0 0;
-  margin:-85% 0 85% 0;
-  position:relative;
-}
-}
-.forum-list-option-2 .description img {
-  position:absolute;
-  left:0;
-  top:0;
-  height:100%;
+.section-forums-in-category .forum {
+  margin:0 10px 20px 10px;
+  padding:0;
 }
 
-/*==================================================
-
-	Opción 3.
-    - 1 línea.
-    - Solo se ve el título
-    - El resto queda oculto
-    - Considerado bloque lineal en todas las versiones
-
-==================================================*/
-.forum-list-option-3 {
-  display:inline-block;
+.section-forums-in-category .forum a * {
+  color:#999;
 }
-.forum-list-option-3 li div {
-  display:none;
+.section-forums-in-category .forum a:hover * {
+  color:#999;
+  opacity:0.8;
 }
 
 
-.number-posts, .number-threads {
-  display:inline-block;
-  margin-right:1em;
-}
-.number-posts img,
-.number-threads img {
-  height:1em;
+/*-----------------------------------------------
+  forum-default
+  Opción 0. Foros sin formato
+-----------------------------------------------*/
+.forum-default h3 a {
   vertical-align:middle;
 }
 
 
+@media all and (min-width:780px) {
+.forum-default .forum-title {
+  float:left;
+  width:520px;
+}
+.forum-default .forum-numbers {
+  float:left;
+  width:40px;
+}
+.forum-default .forum-last-post {
+  float:left;
+  width:100px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.forum-default .forum-title {
+  width:700px;
+}
+.forum-default .forum-numbers {
+  width:60px;
+}
+.forum-default .forum-last-post {
+  width:140px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.forum-default .forum-title {
+  width:880px;
+}
+.forum-default .forum-numbers {
+  width:80px;
+}
+.forum-default .forum-last-post {
+  width:180px;
+}
+}
+
+/*-----------------------------------------------
+  forum-only-title
+  Opción 1. Foros que solo muestran el título
+-----------------------------------------------*/
+.forum-only-title {
+  display:inline-block;
+}
+.forum-only-title .description,
+.forum-only-title .forum-numbers,
+.forum-only-title .forum-last-post {
+  display:none;
+}
+
+/*-----------------------------------------------
+  forum-tall-image
+  Opción 2. Foros que muestran una imagen alta
+-----------------------------------------------*/
+.forum-tall-image {
+}
+
+.forum-tall-image .description {
+  overflow:hidden;
+  font-size:0.846em;
+}
+
+.forum-tall-image .description .image-container {
+  overflow:hidden;
+  height:0;
+  display:none;
+}
+
+.forum-tall-image .description img {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.forum-tall-image {
+  float:left;
+  width:160px;
+  height:425px;
+  border-bottom:#333 1px dotted;
+}
+.forum-tall-image .description {
+  height:335px;
+  margin:0 0 5px 0;
+}
+.forum-tall-image .description .image-container {
+  display:block;
+  height:0;
+  padding:161% 0 0 0;
+  position:relative;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.forum-tall-image  {
+  width:220px;
+  height:500px;
+}
+.forum-tall-image .description {
+  height:430px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.forum-tall-image {
+  width:280px;
+  height:430px;
+}
+.forum-tall-image .description {
+  width:190px;
+  height:360px;
+  padding:0 10px 0 0;
+  float:left;
+}
+}
+
+.forum-tall-image .forum-numbers,
+.forum-tall-image .number-threads,
+.forum-tall-image .number-posts,
+.forum-tall-image .forum-last-post {
+  display:inline-block;
+  margin:0 10px 0 0;
+}
+
+@media all and (min-width:1280px) {
+.forum-tall-image .forum-numbers,
+.forum-tall-image .number-threads,
+.forum-tall-image .number-posts,
+.forum-tall-image .forum-last-post {
+  display:block;
+}
+}
+
+/*-----------------------------------------------
+  forum-wide-image
+  Opción 3. Foros que muestran una imagen ancha
+-----------------------------------------------*/
+.forum-wide-image {
+}
+
+.forum-wide-image .description {
+  overflow:hidden;
+  font-size:0.846em;
+}
+
+.forum-wide-image .description .image-container {
+  overflow:hidden;
+  height:0;
+  display:none;
+}
+
+.forum-wide-image .description img {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+}
+
+.forum-wide-image h3 {
+  white-space:nowrap;
+  overflow:hidden;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.forum-wide-image {
+  float:left;
+  width:160px;
+  height:267px;
+  padding:0;
+  border-bottom:#333 1px dotted;
+}
+.forum-wide-image .description {
+  height:160px;
+  margin:0 0 5px 0;
+}
+.forum-wide-image .description .image-container {
+  display:block;
+  height:0;
+  padding:56.25% 0 0 0;
+  position:relative;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.forum-wide-image  {
+  width:220px;
+  height:272px;
+}
+.forum-wide-image .description {
+  height:202px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.forum-wide-image {
+  width:280px;
+  height:276px;
+}
+.forum-wide-image .description {
+  height:224px;
+}
+}
+
+.forum-wide-image .forum-numbers,
+.forum-wide-image .number-threads,
+.forum-wide-image .number-posts,
+.forum-wide-image .forum-last-post {
+  display:inline-block;
+  margin:0 10px 0 0;
+}
+
+
+/*==================================================
+
+  Sección topics-in-forum
+  Lista de temas en un foro
+
+==================================================*/
+.section-topics-in-forum {
+  padding:0;
+}
+.section-topics-in-forum ul.topics {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.section-topics-in-forum li.topic {
+  margin:0 0 20px 0;
+  list-style:none;
+}
+
+.section-topics-in-forum li.topic .topic-title {
+  display:block;
+  padding:0 10px;
+}
+.section-topics-in-forum li.topic .topic-numbers {
+  display:inline-block;
+  padding:0 10px;
+}
+.section-topics-in-forum li.topic .topic-last-post {
+  display:inline-block;
+  padding:0 10px;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-topics-in-forum li.topic .topic-title {
+  float:left;
+  width:520px;
+}
+.section-topics-in-forum li.topic .topic-numbers {
+  float:left;
+  width:40px;
+}
+.section-topics-in-forum li.topic .topic-last-post {
+  float:left;
+  width:100px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-topics-in-forum li.topic .topic-title {
+  width:700px;
+}
+.section-topics-in-forum li.topic .topic-numbers {
+  width:60px;
+}
+.section-topics-in-forum li.topic .topic-last-post {
+  width:140px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-topics-in-forum li.topic .topic-title {
+  width:880px;
+}
+.section-topics-in-forum li.topic .topic-numbers {
+  width:80px;
+}
+.section-topics-in-forum li.topic .topic-last-post {
+  width:180px;
+}
+}
+
+.section-topics-in-forum li.topic .topic-title .icon {
+  display:inline-block;
+}
+.section-topics-in-forum li.topic .topic-title .icon img {
+  height:1em;
+}
+
+
+
+/*==================================================
+
+  Sección posts-in-topic
+  Lista de posts en un tema
+  
+  Sección post-preview
+  Previsualización de un post
+
+==================================================*/
+.section-posts-in-topic {
+  padding:0;
+}
+.section-post-preview {
+  padding:0 10px;
+}
+
+ul.posts {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+li.post {
+  padding:0 0 10px 0;
+  margin:0 0 20px 0;
+  
+  border-bottom: 1px #666 dotted
+}
+li.post aside,
+.section-post-preview aside,
+.section-view-profile aside {
+  padding:0 10px;
+}
+li.post aside .avatar {
+  width:100px;
+  height:100px;
+  overflow:hidden;
+}
+li.post aside .avatar img {
+  max-width:100%;
+}
+
+li.post aside .rank,
+li.post aside .online,
+li.post aside dl {
+  display:none;
+}
+li.post article .date {
+  font-style:italic;
+  text-align:center;
+  padding:20px 0 30px 0;
+  color:#666;
+}
+li.post article .date a {
+  color:#666;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+li.post aside,
+.section-post-preview aside,
+.section-view-profile aside {
+  float:left;
+  width:220px;
+}
+li.post aside .rank,
+li.post aside .online,
+li.post aside dl {
+  display:block;
+}
+
+li.post aside dl dt {
+  float:left;
+  width:100px;
+  padding:0 10px 0 0;
+  margin:0 0 10px 0;
+}
+li.post aside dl dd {
+  float:left;
+  width:100px;
+  padding:0 0 0 10px;
+  margin:0 0 10px 0;
+}
+
+li.post article,
+.section-post-preview article {
+  float:left;
+  width:460px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+li.post aside,
+.section-post-preview aside,
+.section-view-profile aside {
+  width:220px;
+}
+li.post aside dl dt {
+  width:100px;
+}
+li.post aside dl dd {
+  width:100px;
+}
+
+li.post article,
+.section-post-preview article {
+  width:700px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+li.post aside,
+.section-post-preview aside,
+.section-view-profile aside {
+  width:280px;
+}
+li.post aside dl dt {
+  width:100px;
+}
+li.post aside dl dd {
+  width:160px;
+}
+li.post article,
+.section-post-preview article {
+  width:700px;
+}
+}
+
+li.post article {
+}
+li.post article .post-tools {
+}
+li.post article .post-tools ul {
+  padding:0;
+  margin:0;
+}
+li.post article .post-tools li {
+  margin:0 0 0 10px;
+}
+li.post article .date {
+}
+.section-posts-in-topic article .message,
+.section-post-preview article .message {
+  font-size:1.231em;
+}
+
+
+
+.post-tools {
+  display:block;
+  padding:10px;
+}
+
+.post-tools ul {
+  text-align:right;
+}
+.post-tools li {
+  display:inline-block;
+}
+
+@media all and (min-width:1280px) {
+.post-tools {
+  float:right;
+  width:160px;
+}
+
+.post-tools ul {
+  text-align:left;
+}
+
+.post-tools li {
+  display:block;
+}
+}
+
+
+/*==================================================
+
+  Sección users-in-group
+  Lista de usuarios en un grupo
+
+==================================================*/
+
+.section-users-in-group {
+  padding:0 10px;
+}
+
+
+/*==================================================
+
+  Sección admin-message 2ª parte
+  Lista de tramas activas
+
+==================================================*/
+
+.section-admin-message li.active-story img {
+  max-width:100%;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-admin-message ul.active-stories {
+  margin:0 -10px;
+}
+.section-admin-message li.active-story {
+  float:left;
+  padding:0 10px;
+  width:220px;
+  height:100px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-admin-message li.active-story {
+  width:300px;
+  height:90px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-admin-message li.active-story {
+  width:380px;
+  height:80px;
+}
+}
 
 /*###########################################################
-
-
-    Estructura > Lista de temas en un foro
-    
-    Sustitúyase .thread-list-option-X por f + ID de las
-    categorías a las que se quiere aplicar la opción
-
-
+  
+  
+  Secciones.
+  Otras
+  
+  
 ###########################################################*/
+
+/*==================================================
+
+  Sección section-group
+  Muestra información de un grupo
+
+==================================================*/
+.section-group {
+  padding:0 10px;
+}
+
+/*==================================================
+
+  Sección whoisonline
+  Muestra, en la parte inferior del foro los online
+
+==================================================*/
+
+/*==================================================
+
+  Sección ucp-tabs y ucp-form
+  Formulario de editar perfil
+
+==================================================*/
+.ucp-tabs {
+}
+.ucp-tabs ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.ucp-tabs li {
+  margin:0;
+  padding:0 10px 0 0;
+  float:left;
+  width:150px;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.ucp-tabs {
+  float:left;
+  width:100px;
+  padding:0 10px;
+}
+.ucp-tabs li {
+  display:block;
+}
+
+.ucp-form {
+  float:left;
+  width:600px;
+  padding:0;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.ucp-tabs {
+  float:left;
+  width:140px;
+}
+.ucp-form {
+  width:800px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.ucp-tabs {
+  width:180px;
+}
+.ucp-form {
+  width:1000px;
+}
+}
+
+
+/*==================================================
+
+  Sección section-profile-form
+  Formulario de editar perfil
+
+==================================================*/
+.section-profile-form {
+  
+}
+
+
+/*==================================================
+
+  Sección section-view-profile
+  Formulario de ver perfil
+
+==================================================*/
+.section-view-profile aside {
+}
+@media all and (min-width:780px) {
+.section-view-profile aside {
+  float:left;
+  width:160px;
+}
+.section-view-profile aside dl dt {
+  float:left;
+  width:100px;
+  padding:0 10px 0 0;
+  margin:0 0 10px 0;
+}
+.section-view-profile aside dl dd {
+  float:left;
+  width:100px;
+  padding:0 0 0 10px;
+  margin:0 0 10px 0;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-view-profile aside {
+  width:220px;
+}
+.section-view-profile aside dl dt {
+  width:100px;
+}
+.section-view-profile aside dl dd {
+  width:100px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-view-profile aside {
+  width:280px;
+}
+.section-view-profile aside dl dt {
+  width:100px;
+}
+.section-view-profile aside dl dd {
+  width:160px;
+}
+
+}
+
+
+
+
+.section-view-profile form {
+}
+@media all and (min-width:780px) {
+.section-view-profile form {
+  float:left;
+  width:520px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-view-profile form {
+  width:700px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-view-profile form {
+  width:880px;
+}
+}
+
+.invisible {
+  display:none;
+}
+/*==================================================
+
+  Sección section-post-
+  Nuevo post
+
+==================================================*/
+.section-post-post {
+}
+.section-post-post aside {
+  padding:0 10px;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-post-post aside {
+  float:left;
+  width:220px;
+}
+.section-post-post article {
+  float:left;
+  width:460px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-post-post aside {
+  width:220px;
+}
+.section-post-post article {
+  width:700px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-post-post aside {
+  width:280px;
+}
+.section-post-post article {
+  width:700px;
+}
+}
+
+
+/*==================================================
+
+  Sección admin-message
+  Mensaje del administrador en el índice
+
+==================================================*/
+.section-admin-message {
+  padding:10px;
+}
+
+
+/*==================================================
+
+  Sección section-view-rpg
+  Muestra la ficha RPG del usuario
+
+==================================================*/
+.section-view-rpg input {
+  box-shadow:none;
+  height:1em;
+  width:100%;
+}
+.section-view-rpg textarea {
+  box-shadow:none;
+  height:7em;
+  width:100%;
+  resize:none;
+}
+
+
+/*==================================================
+
+  Sección section-edit-rpg
+  Muestra la ficha RPG del usuario
+
+==================================================*/
+.section-edit-rpg textarea {
+  height:7em;
+  width:50%;
+  resize:none;
+}
+
+
+/*==================================================
+
+  Sección especial registro
+  Página de registro que no funciona con plantilla PUNBB
+
+==================================================*/
+#pun-visit {
+  display:none;
+}
+.main {
+  background:#000;
+  float:none;
+  clear:both;
+  
+  padding:10px 0 20px 0;
+  
+  text-align:left;
+}
+
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.main {
+  width:720px;
+  
+  margin:0 auto;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.main {
+  width:960px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.main {
+  width:1200px;
+}
+}

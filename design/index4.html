@@ -1,0 +1,864 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documento sin título</title>
+<link rel="stylesheet" href="global2.css">
+</head>
+
+<body class="indexPage">
+<a id="top" name="top" accesskey="t"></a>
+<header class="container-12"><a href="/" id="logo"><img src="http://i34.servimg.com/u/f34/17/38/25/48/logo-r10.png" alt="Seijyuji Gakuen"></a>
+  <div class="title-and-description">
+    <h1>Seijyuji Gakuen</h1>
+    <p>Foro de rol de Ao no Exorcist</p>
+  </div>
+  <br class="clearfloat">
+  <nav id="topnav" class="container-12">
+    <ul class="grid-12">
+      <li><a class="mainmenu" href="/"><img id="i_icon_mini_index" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Índice" title="Índice">Índice</a> &nbsp;</li>
+      <li><a class="mainmenu" href="/faq"><img id="i_icon_mini_faq" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="FAQ" title="FAQ">FAQ</a> &nbsp;</li>
+      <li><a class="mainmenu" href="/search" onclick="showhide(document.getElementById('search_menu')); return false;"><img id="i_icon_mini_search" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Buscar" title="Buscar">Buscar</a> &nbsp;<script type="text/javascript">//<![CDATA[
+var url_search = '/search';
+insert_search_menu_new();//]]>
+</script>
+        <div class="overview row3" id="search_menu" style="display:none;position:absolute;width:350px;z-index:10000">
+          <form action="/search" method="get">
+            <input type="hidden" name="mode" value="searchbox">
+            <p class="title-overview row2">Buscar</p>
+            <p class="center-overview">
+              <input type="text" class="inputbox medium" name="search_keywords">
+              <input type="submit" class="button1" value="Go">
+              <br>
+              Resultados por:
+              <label for="rposts">
+                <input id="rposts" type="radio" name="show_results" value="posts">
+                Mensajes</label>
+              <label for="rtopics">
+                <input id="rtopics" type="radio" name="show_results" value="topics" checked="checked">
+                Temas</label>
+            </p>
+            <hr class="dashed">
+            <p class="center-overview"><a href="/search" rel="nofollow" title="Búsqueda avanzada"><img src="http://illiweb.com/fa/empty.gif" width="12" height="13" alt="Búsqueda avanzada"> Búsqueda avanzada</a></p>
+          </form>
+        </div>
+      </li>
+      <li><a class="mainmenu" href="/memberlist" rel="nofollow"><img id="i_icon_mini_members" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Miembros" title="Miembros">Miembros</a> &nbsp;</li>
+      <li><a class="mainmenu" href="/groups"><img id="i_icon_mini_groups" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Grupos de Usuarios" title="Grupos de Usuarios">Grupos de Usuarios</a> &nbsp;</li>
+      <li><a class="mainmenu" href="/profile?mode=editprofile"><img id="i_icon_mini_profile" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Perfil" title="Perfil">Perfil</a> &nbsp;</li>
+      <li><a class="mainmenu" href="/privmsg?folder=inbox"><img id="i_icon_mini_message" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Mensajería" title="Mensajería">Mensajería</a> &nbsp;</li>
+      <li><a class="mainmenu" href="/login?logout=1&amp;tid=09ad19a57992c5a425597582786eb6a5&amp;key=f06bfd" rel="nofollow" id="logout"><img id="i_icon_mini_logout" src="http://illiweb.com/fa/empty.gif" border="0" hspace="2" alt="Desconectarse [ Admin ]" title="Desconectarse [ Admin ]">Desconectarse [ Admin ]</a> &nbsp;</li>
+      <br class="clearfloat">
+    </ul>
+  </nav>
+</header>
+<section class="section-toolbar container-12">
+  <nav class="breadcrumb grid-6"> <a href="/">Seijyuji Gakuen</a> <strong></strong> </nav>
+  <div class="toolbar grid-6">
+    <ul>
+      <li><a href="/search?search_id=newposts">Mensajes nuevos<!--
+Ver mensajes desde la última visita--></a></li>
+      <li><a href="/search?search_id=egosearch">Tus mensajes<!--
+Ver tus mensajes--></a></li>
+      <!--
+<li><a href="/search?search_id=unanswered">Sin respuestaVer mensajes sin respuesta</a></li>-->
+      <li><a href="/?mark=forums">Marcar todos como leídos<!--
+Marcar todos los foros como leídos--></a></li>
+    </ul>
+  </div>
+</section>
+<section class="section-admin-message">
+  <ul>
+    <li class="active-story">
+      <h3><a href="/h3-">Nuevo Paladín, nueva historia</a></h3>
+      <img src="http://i34.servimg.com/u/f34/17/38/25/48/010.jpg">
+      <p>Empieza una nueva temporada en Seijyuji Gakuen</p>
+    </li>
+    <li class="active-story">
+      <h3><a href="#">«Summer Cross Festival»</a></h3>
+      <p>Nueva trama. Desde el 28/07/2013 (domingo)</p>
+    </li>
+    <li class="active-story">
+      <h3>El Ejército del Paladín</h3>
+      <p>próximamente</p>
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Administración</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-only-title" id="f22">
+      <div class="forum-title"> <a href="/f22-informacion-importante" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Información importante</h3>
+        <div class="description"> Reglas del foro e información relevante. Obligatorio de leer para las primeras visitas<br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 6</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 23 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t223-normas-de-clase-que-deben-seguir-los-profesores" title="Normas de clase que deben seguir los profesores">Normas de clase ...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-only-title" id="f21">
+      <div class="forum-title"> <a href="/f21-pruebas-de-rol" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Pruebas de Rol</h3>
+        <div class="description"> En este subforo SOLO se permiten escribir pruebas de Rol<br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 34</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 87 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t276-prueba-de-rol-akiko-chibata" title="Prueba de rol-Akiko Chibata">Prueba de rol-Ak...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-only-title" id="f85">
+      <div class="forum-title"> <a href="/f85-historia-ambientacion" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Historia &amp; Ambientación</h3>
+        <div class="description"> </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 2</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 2 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t174-historia-trama-actual" title="Historia &amp; trama actual">Historia &amp; trama...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-only-title" id="f83">
+      <div class="forum-title"> <a href="/f83-comentarios-feedback" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Comentarios (feedback)</h3>
+        <div class="description"> Postea aquí cualquier comentario sobre el funcionamiento del foro<br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 8</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 17 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t249-ayuda-con-el-sistema-de-batalla" title="Ayuda con el sistema de batalla">Ayuda con el sis...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-only-title" id="f80">
+      <div class="forum-title"> <a href="/f80-afiliaciones" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Afiliaciones</h3>
+        <div class="description"> </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 11</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 14 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t273-panem-foro-juegos-del-hambre-y-rpg-afiliacion-elite" title="Panem &quot;Foro Juegos del Hambre y RPG&quot; Afiliación Élite">Panem "Foro Juego...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Off rol</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-wide-image" id="f3">
+      <div class="forum-title"> <a href="/f3-presentaciones" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Presentaciones</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/presen10.jpg"></div>
+          <p> ¡No seas tímido y date a conocer! </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 25</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 196 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t258-me-presento" title="Me presento! ">Me presento! </a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f82">
+      <div class="forum-title"> <a href="/f82-noticias" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Noticias</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/notici10.jpg"></div>
+          <p> Información complementaria del foro </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 3</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 7 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t266-evento-se-busca" title="{Evento} Se busca ">{Evento} Se busc...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f23">
+      <div class="forum-title"> <a href="/f23-relaciones" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Relaciones</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/relaci10.jpg"></div>
+          <p> Di la relación que tengas con el resto de personajes del foro </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 3</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 3 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t262-relaciones-de-familia-de-ariel-ariadna-angel" title="Relaciones de Familia de Ariel Ariadna Angel">Relaciones de Fa...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f28">
+      <div class="forum-title"> <a href="/f28-propongo-rol" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Propongo rol</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/busco_10.jpg"></div>
+          <p> Si quieres rolear y tienes una buena trama, ponla aquí o iníciala sin tener que esperar </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 6</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 24 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t271-quiero-rolear" title="Quiero rolear!!!">Quiero rolear!!!...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Ciudad de Seijyuji</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-tall-image" id="f1">
+      <div class="forum-title"> <a href="/f1-monasterio" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Monasterio</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/monast10.jpg"></div>
+          <p> Este es el pequeño monasterio masculino que lleva el padre Fujimoto, el cual se encuentra al sur, en el pueblo de Seijyuji Gakuen </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 5 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t20-precuela-mismo-dia" title="(Precuela) Mismo dia...">(Precuela) Mismo...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-tall-image" id="f2">
+      <div class="forum-title"> <a href="/f2-parque-del-sur" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Parque del Sur</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/parque10.jpg"></div>
+          <p> Un pequeño parque que se encuentra cerca del monasterio. Además de un bonito jardín tiene diversos columpios para niños </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 5 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t192-caza-de-demonios" title="Caza de demonios">Caza de demonios...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-tall-image" id="f4">
+      <div class="forum-title"> <a href="/f4-calle-de-la-cruz-sur" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Calle de la Cruz Sur</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/callec10.jpg"></div>
+          <p> La calle principal del pueblo, donde pasea mucha gente, comprando o hablando. Esta repleta de tiendas. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 7</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 33 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t267-en-busca-del-uniforme-de-ariadna" title="En busca del uniforme de Ariadna">En busca del uni...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-tall-image" id="f60">
+      <div class="forum-title"> <a href="/f60-area-residencial" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Área residencial</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/areare10.jpg"></div>
+          <p> Una de las zonas más pobladas de la ciudad, donde se encuentran gran cantidad de edificios poblados de ciudadanos. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 0</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 0 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="" title=""></a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Seijyuji Gakuen</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-wide-image" id="f17">
+      <div class="forum-title"> <a href="/f17-entrada-principal" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Entrada principal</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/entrad10.jpg"></div>
+          <p> Flanqueada por amplios jardines con arboles altos. La puerta principal tiene tres escalinatas, una al frente y dos en los laterales. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 6</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 29 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t254-un-laberinto-a-lo-grande" title="Un laberinto a lo grande">Un laberinto a l...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f16">
+      <div class="forum-title"> <a href="/f16-salon-de-actos" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Salón de Actos</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/salan-11.jpg"></div>
+          <p> Aquí es donde se celebra la ceremonia de bienvenida de los nuevos estudiantes, así como las conferencias o actos importantes. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 26 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t75-presentacion-del-curso-2011-2012" title="Presentación del curso 2011-2012">Presentación del...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f77">
+      <div class="forum-title"> <a href="/f77-gran-parque-seijyuji-gakuen" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Gran parque Seijyuji Gakuen</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/gran-p10.jpg"></div>
+          <p> Un lugar común para toda la Seijyuji Gakuen, sean exorcistas o no. Aquí los alumnos aprovechan para relajarse, comer, etc. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 11</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 138 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t265-corriendo-para-calentar" title="Corriendo para calentar">Corriendo para c...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f15">
+      <div class="forum-title"> <a href="/f15-cafeteria-y-comedor" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Cafetería y comedor</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/cafete10.jpg"></div>
+          <p> Aquí los mejores chef preparan la comida de los estudiantes. Los precios son muy elevados y solo unos pocos pueden permitirse algo. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 4</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 15 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t234-aliviando-el-hambre-de-bell" title="Aliviando el hambre de Bell">Aliviando el ham...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f14">
+      <div class="forum-title"> <a href="/f14-hospital" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Hospital</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/hospit10.jpg"></div>
+          <p> El hospital de la Seijyuji Gakuen, donde va todo aquel que esté herido o necesite atención medica. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 4</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 28 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t169-curando-la-mano" title="Curando la mano">Curando la mano...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f11">
+      <div class="forum-title"> <a href="/f11-escuela-de-exorcistas" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Escuela de Exorcistas</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/escuel10.jpg"></div>
+          <p> Oculta para la gran parte de los alumnos, salvo aquellos que tienen la llave para acceder a ella. Es un largo pasillo lleno de aulas. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 10</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 198 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t215-dando-un-pequeno-paseo-antes-de-ir-a-clase" title="Dando un pequeño paseo antes de ir a clase">Dando un pequeño...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f12">
+      <div class="forum-title"> <a href="/f12-biblioteca" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Biblioteca</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/biblio10.jpg"></div>
+          <p> La biblioteca es un sitio de estudio, así que recordar guardar silencio. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 2</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 23 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t214-a-estudiar-se-ha-dicho" title="A estudiar se ha dicho">A estudiar se ha...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f10">
+      <div class="forum-title"> <a href="/f10-residencia-de-estudiantes-y-profesores" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Residencia de estudiantes y profesores</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/reside10.jpg"></div>
+          <p> Las habitaciones de estudiantes son dobles y las de profesores son más majestuosas e individuales </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 41</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 238 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t270-habitacion-de-jun-despues-del-despertar-de-drake" title="Habitación de Jun - Después del despertar de Drake">Habitación de Ju...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f9">
+      <div class="forum-title"> <a href="/f9-antigua-residencia" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Antigua residencia</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/reside11.jpg"></div>
+          <p> La antigua residencia de la Seijyuji Gakuen es un viejo edificio el cual se encuentra aparentemente desocupado. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 11</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 152 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t246-la-primera-noche-de-ariadna" title="La primera noche de Ariadna...">La primera noche...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f8">
+      <div class="forum-title"> <a href="/f8-tienda-de-suministros-futsumaya" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Tienda de suministros Futsumaya</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/tienda11.jpg"></div>
+          <p> La tienda solo para exorcistas de la cual está a cargo la señora Moriyama. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 5</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 5 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t221-el-despues-del-bosque" title="El después del bosque">El después del b...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f13">
+      <div class="forum-title"> <a href="/f13-kiosko" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Kiosko</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/kiosko10.jpg"></div>
+          <p> Pequeño puesto donde venden bocatas para los alumnos de la academia a un precio mucho más económico que la cafetería. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 17 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t74-intentando-robar-algo-para-comer" title="Intentando robar algo para comer...">Intentando robar...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f49">
+      <div class="forum-title"> <a href="/f49-puesto-de-monja-yaki" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Puesto de Monja-yaki</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/puesto10.jpg"></div>
+          <p> El puesto de delicioso Monja-yaki de la Seijyuji Gakuen. Se rumorea que es una de las comidas preferidas del director. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 2</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 13 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t178-que-rico" title="¡Que rico!">¡Que rico!</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f7">
+      <div class="forum-title"> <a href="/f7-mansion-de-johann-fausto-v" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Mansión de Johann Fausto V</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/mansia10.jpg"></div>
+          <p> La mansión y despacho del director de la academia, Johann Fausto V, también conocido por otros pocos como Mephisto Pheles </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 0</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 0 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="" title=""></a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f81">
+      <div class="forum-title"> <a href="/f81-sala-de-profesores" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Sala de Profesores</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/sala_d10.jpg"></div>
+          <p> La sala de reunión de los profesores de la Seijyuji Gakuen. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 2</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 14 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t117-despues-de-clase" title="Después de clase ">Después de clase...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f48">
+      <div class="forum-title"> <a href="/f48-mephyland" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Mephyland</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/mepphy10.jpg"></div>
+          <p> ¡El parque de atracciones de la Seijyuji! El nombre viene a honor de su director, y tiene las atracciones más divertidas e incluso terroríficas de toda la zona. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 2</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 8 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t245-helter-skelter-bon-shima-libre" title="Helter Skelter [Bon, Shima, Libre]">Helter Skelter [...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f6">
+      <div class="forum-title"> <a href="/f6-bosque" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Bosque</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/bosque10.jpg"></div>
+          <p> El bosque de la academia, donde se llevan a cabo examenes y entrenamientos. De noche es un nido de demonios de nivel bajo. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 13</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 266 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t268-despertando-los-poderes-de-drake" title="Despertando los poderes de Drake">Despertando los ...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f5">
+      <div class="forum-title"> <a href="/f5-estacion-de-tren" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Estación de tren</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i34.servimg.com/u/f34/17/38/25/48/estaci10.jpg"></div>
+          <p> Para ir lejos de la Seijyuji Gakuen la mayoria de personas utiliza el tren, en especial los exorcistas cuando deben salir a misiones lejanas. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 2</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 2 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t253-la-llegada-de-drake-fujimaru" title="La llegada de Drake Fujimaru">La llegada de Dr...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Kyoto</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-default" id="f62">
+      <div class="forum-title"> <a href="/f62-posada" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Posada</h3>
+        <div class="description"> Una humilde posada de Kyoto destinada a hospedar a gente. Tiene un estilo típico de las casas japonesas y los templos. <!--La dueña es la madre de Suguro Ryuuji, por lo que a su vez está es la casa de toda la familia Suguro. También vive aquí el Monje Tatsuma Suguro, cabecilla de la secta budista Myoda. Corren rumores de que se trata de un sacerdote corrupto.--><br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 1 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t206-un-sueno-extrano" title="Un sueño extraño">Un sueño extraño...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-default" id="f73">
+      <div class="forum-title"> <a href="/f73-calles" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Calles</h3>
+        <div class="description"> Las calles de Kyoto, tanto las de la ciudad más moderna de altos edificios como las más antiguas, rodeadas de un paisaje más tradicional.<br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 3</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 27 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t191-un-dia-corriente-de-shima-y-bon" title="Un día corriente de Shima y Bon">Un día corriente...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-default" id="f64">
+      <div class="forum-title"> <a href="/f64-la-torre-de-kyoto" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> La torre de Kyoto</h3>
+        <div class="description"> La torre de Kyoto es una torre de observación de 131 metros de altura que se encuentra en el barrio de Shimogyō-ku.<br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 9 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t16-precuela-frio-anochecer" title="(Precuela) Frío anochecer">(Precuela) Frío ...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-default" id="f70">
+      <div class="forum-title"> <a href="/f70-montanas-kongo" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Montañas Kongo</h3>
+        <div class="description"> Las montañas más lejanas, rodeadas por un espeso bosque<br>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 0</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 0 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="" title=""></a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>La Orden</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-wide-image" id="f50">
+      <div class="forum-title"> <a href="/f50-sede-central-de-japon-tokio" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Sede Central de Japón, Tokio</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/japan10.jpg"></div>
+          <p> Se encuentra en un subterráneo bajo la Seijyuji Gakuen, Tokio. Se encuentra bajo el liderazgo de Mephisto Pheles. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 1 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t173-haciendome-profesor" title="Haciéndome profesor. ">Haciéndome profe...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f53">
+      <div class="forum-title"> <a href="/f53-sede-central-de-inglaterra-londres" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Sede Central de Inglaterra, Londres</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/englan10.jpg"></div>
+          <p> La rama inglesa de la orden se encuentra oculta en algún lugar de Londres, Inglaterra. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 3 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t17-precuela-en-la-rama-inglesa-night" title="Precuela en la rama inglesa (Night)">Precuela en la r...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f61">
+      <div class="forum-title"> <a href="/f61-subsede-japonesa-sede-central-de-kioto-kioto" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Subsede japonesa: Sede Central de Kioto, Kioto</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/kyoto10.jpg"></div>
+          <p> La rama de Kyoto de la orden se encuentra en la misma capital. Su líderazgo es compartido entre Yaozo Shima y Uwabami Hojo </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 0</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 0 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="" title=""></a> </div>
+      <br class="clearfloat">
+    </li>
+    <li class="forum forum-wide-image" id="f54">
+      <div class="forum-title"> <a href="/f54-sede-principal-de-la-orden-vaticano" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Sede principal de la orden, Vaticano</h3>
+        <div class="description">
+          <div class="image-container"><img src="http://i38.servimg.com/u/f38/17/38/25/48/vatica11.jpg"></div>
+          <p> En el Vaticano, concretamente en la Plaza de San Pedro, se encuentra la sede principal de la Seijyuji. Se encuentra dirigida por el actual Paladín, así como por el consejo de los Gregori. Ellos son quienes dictan lo que se ha de hacer y son la autoridad máxima en la orden. </p>
+        </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 3</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 3 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t113-a-punto-de-emprender-el-viaje-hacia-la-seijyuji" title="A punto de emprender el viaje hacia la Seijyuji">A punto de empre...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Beta</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-default" id="f74">
+      <div class="forum-title"> <a href="/f74-beta" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Beta</h3>
+        <div class="description"> </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 32</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 232 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t275-nuevo-paladin" title="Nuevo Paladín">Nuevo Paladín</a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-forums-in-category container-12">
+  <div class="grid-12">
+    <h2>Especial</h2>
+  </div>
+  <ul class="forums">
+    <li class="forum forum-default" id="f29">
+      <div class="forum-title"> <a href="/f29-buscando-a-usamaro" class="url-forum">
+        <h3> <img class="icon" title="No hay nuevos mensajes" src="http://i48.servimg.com/u/f48/17/38/25/48/icons_10.png" alt="No hay nuevos mensajes"> Buscando a Usamaro</h3>
+        <div class="description"> </div>
+        </a> </div>
+      <div class="forum-numbers">
+        <div class="number-threads"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-t10.png" title="Temas:" class="icon"> 1</div>
+        <div class="number-posts"><img src="http://i34.servimg.com/u/f34/17/38/25/48/icon-p10.png" title="Mensajes:" class="icon"> 2 </div>
+      </div>
+      <div class="forum-last-post"> Último tema: <a href="/t263-evento-te-pille" title="[Evento] ¡Te pillé! ">[Evento] ¡Te pil...</a> </div>
+      <br class="clearfloat">
+    </li>
+    <br class="clearfloat">
+  </ul>
+</section>
+<section class="section-buttonset">
+  <ul>
+    <li><a href="/search?search_id=activetopics">Temas activos del día</a></li>
+    <li><a href="/memberlist?mode=today_posters">Top 20 posteadores hoy</a></li>
+    <li><a href="/memberlist?mode=overall_posters">Top 20 posteadores del foro</a></li>
+    <li><a href="/?mode=delete_cookies">Suprimir las cookies del foro</a></li>
+  </ul>
+</section>
+<section class="section-viewonline container-12">
+  <div id="statistics" class="grid-12">
+    <p>Nuestros miembros han publicado un total de <strong>1866</strong> mensajes. Tenemos <strong>52</strong> miembros registrados. El último usuario registrado es <strong><a href="/u58"><span style="color:#888"><strong>Akiko Chibata</strong></span></a></strong>.</p>
+    <h2><a href="/viewonline" rel="nofollow">¿Quién está en línea?</a> </h2>
+    <p>En total hay <strong>1</strong> usuario en línea: 0 Registrados, 1 Ocultos y 0 Invitado . Usuarios registrados: <a href="/u1"><i><span style="color:#999"><strong>Admin</strong></span></i></a><br>
+    </p>
+    <p>La mayor cantidad de usuarios en línea fue <strong>15</strong> el Dom 10 Jun 2012 - 0:45.</p>
+    <!--
+<p><br style="line-height:5px;" />Ningún miembro celebra su cumpleaños hoy<br /> Miembros que celebran su cumpleaños en los próximos 7 días: <a href="/u48"><span style="color:#888"><strong>Ariel Ariadna Angel</strong></span></a> (17) <br /></p>--></div>
+</section>
+<section class="section-jumpbox container-12">
+  <div class="grid-12">
+    <form action="/viewforum" method="get" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}" id="qjump">
+      <label>Cambiar a </label>
+      <select name="selected_id" onchange="if(this.options[this.selectedIndex].value != -1){ forms['jumpbox'].submit() }">
+        <option value="-1">Seleccionar un foro</option>
+        <option value="-1"></option>
+        <option value="-1">|</option>
+        <option classe="true" value="c6">|--Administración</option>
+        <option classe="true" value="f22">|&nbsp;&nbsp;&nbsp;|--Información importante</option>
+        <option classe="true" value="f21">|&nbsp;&nbsp;&nbsp;|--Pruebas de Rol</option>
+        <option classe="true" value="f85">|&nbsp;&nbsp;&nbsp;|--Historia &amp; Ambientación</option>
+        <option classe="true" value="f83">|&nbsp;&nbsp;&nbsp;|--Comentarios (feedback)</option>
+        <option classe="true" value="f84">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Problemas técnicos</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f80">|&nbsp;&nbsp;&nbsp;|--Afiliaciones</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="c1">|--Off rol</option>
+        <option classe="true" value="f3">|&nbsp;&nbsp;&nbsp;|--Presentaciones</option>
+        <option classe="true" value="f82">|&nbsp;&nbsp;&nbsp;|--Noticias</option>
+        <option classe="true" value="f23">|&nbsp;&nbsp;&nbsp;|--Relaciones</option>
+        <option classe="true" value="f28">|&nbsp;&nbsp;&nbsp;|--Propongo rol</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="c2">|--Ciudad de Seijyuji</option>
+        <option classe="true" value="f1">|&nbsp;&nbsp;&nbsp;|--Monasterio</option>
+        <option classe="true" value="f2">|&nbsp;&nbsp;&nbsp;|--Parque del Sur</option>
+        <option classe="true" value="f4">|&nbsp;&nbsp;&nbsp;|--Calle de la Cruz Sur</option>
+        <option classe="true" value="f25">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Supermercado Nico Nico</option>
+        <option classe="true" value="f26">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Pabellón Cruz del Sur</option>
+        <option classe="true" value="f27">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Callejones</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f60">|&nbsp;&nbsp;&nbsp;|--Área residencial</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="c4">|--Seijyuji Gakuen</option>
+        <option classe="true" value="f17">|&nbsp;&nbsp;&nbsp;|--Entrada principal</option>
+        <option classe="true" value="f16">|&nbsp;&nbsp;&nbsp;|--Salón de Actos</option>
+        <option classe="true" value="f77">|&nbsp;&nbsp;&nbsp;|--Gran parque Seijyuji Gakuen</option>
+        <option classe="true" value="f15">|&nbsp;&nbsp;&nbsp;|--Cafetería y comedor</option>
+        <option classe="true" value="f14">|&nbsp;&nbsp;&nbsp;|--Hospital</option>
+        <option classe="true" value="f11">|&nbsp;&nbsp;&nbsp;|--Escuela de Exorcistas</option>
+        <option classe="true" value="f20">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Aula 1106</option>
+        <option classe="true" value="f33">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Pasillo</option>
+        <option classe="true" value="f19">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Gimnasio</option>
+        <option classe="true" value="f18">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Campo de prácticas</option>
+        <option classe="true" value="f34">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Jardín</option>
+        <option classe="true" value="f35">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Laboratorio</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f12">|&nbsp;&nbsp;&nbsp;|--Biblioteca</option>
+        <option classe="true" value="f10">|&nbsp;&nbsp;&nbsp;|--Residencia de estudiantes y profesores</option>
+        <option classe="true" value="f36">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Habitaciones</option>
+        <option classe="true" value="f76">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Habitaciones de profesores</option>
+        <option classe="true" value="f37">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Comedor</option>
+        <option classe="true" value="f38">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Baños</option>
+        <option classe="true" value="f39">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Terraza</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f9">|&nbsp;&nbsp;&nbsp;|--Antigua residencia</option>
+        <option classe="true" value="f40">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Habitación 602</option>
+        <option classe="true" value="f41">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Comedor y Cocina</option>
+        <option classe="true" value="f42">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Baños</option>
+        <option classe="true" value="f43">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Terraza</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f8">|&nbsp;&nbsp;&nbsp;|--Tienda de suministros Futsumaya</option>
+        <option classe="true" value="f45">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Tienda de exorcistas</option>
+        <option classe="true" value="f46">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Jardín</option>
+        <option classe="true" value="f47">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Habitación de Shiemi</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f13">|&nbsp;&nbsp;&nbsp;|--Kiosko</option>
+        <option classe="true" value="f49">|&nbsp;&nbsp;&nbsp;|--Puesto de Monja-yaki</option>
+        <option classe="true" value="f7">|&nbsp;&nbsp;&nbsp;|--Mansión de Johann Fausto V</option>
+        <option classe="true" value="f81">|&nbsp;&nbsp;&nbsp;|--Sala de Profesores</option>
+        <option classe="true" value="f48">|&nbsp;&nbsp;&nbsp;|--Mephyland</option>
+        <option classe="true" value="f6">|&nbsp;&nbsp;&nbsp;|--Bosque</option>
+        <option classe="true" value="f5">|&nbsp;&nbsp;&nbsp;|--Estación de tren</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="c5">|--Kyoto</option>
+        <option classe="true" value="f62">|&nbsp;&nbsp;&nbsp;|--Posada</option>
+        <option classe="true" value="f63">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Habitaciones</option>
+        <option classe="true" value="f65">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Comedor</option>
+        <option classe="true" value="f66">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Sala principal: Espacio del ruiseñor.</option>
+        <option classe="true" value="f68">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--Cementerio</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f73">|&nbsp;&nbsp;&nbsp;|--Calles</option>
+        <option classe="true" value="f64">|&nbsp;&nbsp;&nbsp;|--La torre de Kyoto</option>
+        <option classe="true" value="f70">|&nbsp;&nbsp;&nbsp;|--Montañas Kongo</option>
+        <option classe="true" value="f72">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--Bosque</option>
+        <option classe="true" value="f71">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--Gomado</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="c3">|--La Orden</option>
+        <option classe="true" value="f50">|&nbsp;&nbsp;&nbsp;|--Sede Central de Japón, Tokio</option>
+        <option classe="true" value="f53">|&nbsp;&nbsp;&nbsp;|--Sede Central de Inglaterra, Londres</option>
+        <option classe="true" value="f61">|&nbsp;&nbsp;&nbsp;|--Subsede japonesa: Sede Central de Kioto, Kioto</option>
+        <option classe="true" value="f54">|&nbsp;&nbsp;&nbsp;|--Sede principal de la orden, Vaticano</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="f74">|--Beta</option>
+        <option classe="true" value="f32">|&nbsp;&nbsp;&nbsp;|--Tablón de Anuncios</option>
+        <option classe="true" value="f24">|&nbsp;&nbsp;&nbsp;|--IMPORTANTE: cómo conseguir permiso para postear en el foro</option>
+        <option classe="true" value="f75">|&nbsp;&nbsp;&nbsp;|--Zona de entrenamiento</option>
+        <option classe="true" value="f79">|&nbsp;&nbsp;&nbsp;|--Tablón de Anuncios para Admins</option>
+        <option classe="true" value="f78">|&nbsp;&nbsp;&nbsp;|--Tablón de Anuncios para moderadores</option>
+        <option classe="true" value="f44">|&nbsp;&nbsp;&nbsp;|--Modelos (solo visible por admin)</option>
+        <option value="-1">|&nbsp;&nbsp;&nbsp;</option>
+        <option classe="true" value="c7">|--Especial</option>
+        <option classe="true" value="f29">&nbsp;&nbsp;&nbsp;&nbsp;|--Buscando a Usamaro</option>
+      </select>
+      <input type="hidden" name="tid" value="09ad19a57992c5a425597582786eb6a5">
+      <input type="submit" value="Ir">
+    </form>
+  </div>
+</section>
+<hr class="container-12 clearfloat">
+<strong><a href="http://www.creatuforo.org" target="_blank">Crea tu foro</a></strong>&nbsp;|&nbsp;<span class="gensmall">©</span> <a href="http://www.foroactivo.com/es/punbb/" target="_blank">PunBB</a>&nbsp;|&nbsp;<a name="bottom" href="http://asistencia.foroactivo.com/" target="_blank">Foro gratis de asistencia</a>&nbsp;|&nbsp;<a name="bottom" href="/statistics" rel="nofollow">Estadísticas</a>&nbsp;|&nbsp;<a name="bottom" href="/contact" rel="nofollow">Contactar</a>&nbsp;|&nbsp;<a href="/abuse?page=%2F&amp;report=1" rel="nofollow">Denunciar un abuso</a><br>
+<p class="center"><strong><a href="/admin/index.forum?part=admin&amp;tid=09ad19a57992c5a425597582786eb6a5">Ir al Panel de Administración</a><br>
+  <br>
+  </strong></p>
+<script type="text/javascript">//<![CDATA[
+fa_endpage();//]]></script>
+<div id="flamegif"></div>
+<div id="flameBG1" style="opacity: -3.098539373972147;">-</div>
+<div id="background2" style="display: none;"></div>
+</body>
+</html>

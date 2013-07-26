@@ -3,6 +3,9 @@
   <aside class="grid-3">
     <div class="avatar">{AVATAR_IMG}</div>
     <div class="rank">{POSTER_RANK}</div>
+    <!-- BEGIN switch_rpg -->
+    <a href="/u{USER_ID}rpgsheet">Ver ficha de persinaje</a>
+    <!-- END switch_rpg -->
     <!-- BEGIN switch_show_status -->
     <div class="online">{USER_ONLINE}</div>
     <!-- END switch_show_status -->
@@ -65,29 +68,7 @@
       </dl>
       <!-- END switch_admin_user_comment_active -->
     
-    <!-- BEGIN switch_rpg -->
-    <h2>{L_VIEWING_RPG}</h2>
-      <dl>
-        <dt>{RPG_IMAGE}</dt>
-        <dd>&nbsp;</dd>
-      </dl>
-      <!-- BEGIN rpg_fields_left -->
-      <dl>
-        <dt>{switch_rpg.rpg_fields_left.F_NAME} :</dt>
-        <dd>{switch_rpg.rpg_fields_left.F_VALUE_NEW}</dd>
-      </dl>
-      <!-- END rpg_fields_left --> 
-      <!-- BEGIN rpg_fields -->
-      <dl>
-        <dt>{switch_rpg.rpg_fields.F_NAME} :</dt>
-        <dd>{switch_rpg.rpg_fields.F_VALUE_NEW}</dd>
-      </dl>
-      <!-- END rpg_fields -->
-    <br class="clear" />
-    <fieldset class="frm-set clearfix">
-      {U_ADMIN_RPG}
-    </fieldset>
-    <!-- END switch_rpg -->
+    
   </form>
 </section>
 <!--

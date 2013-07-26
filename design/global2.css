@@ -322,6 +322,9 @@ a.small-button:active {
   vertical-align:middle;
 }
 
+.rank img {
+  max-width:100%;
+}
 /*###########################################################
   
   
@@ -1188,6 +1191,46 @@ li.post article .date {
   padding:0 10px;
 }
 
+
+/*==================================================
+
+  Sección admin-message 2ª parte
+  Lista de tramas activas
+
+==================================================*/
+
+.section-admin-message li.active-story img {
+  max-width:100%;
+}
+/* RESPONSIVE 720gs */
+@media all and (min-width:780px) {
+.section-admin-message ul.active-stories {
+  margin:0 -10px;
+}
+.section-admin-message li.active-story {
+  float:left;
+  padding:0 10px;
+  width:220px;
+  height:100px;
+}
+}
+
+/* RESPONSIVE 960gs */
+@media all and (min-width:980px) {
+.section-admin-message li.active-story {
+  width:300px;
+  height:90px;
+}
+}
+
+/* RESPONSIVE 1200gs */
+@media all and (min-width:1280px) {
+.section-admin-message li.active-story {
+  width:380px;
+  height:80px;
+}
+}
+
 /*###########################################################
   
   
@@ -1423,6 +1466,37 @@ li.post article .date {
   padding:10px;
 }
 
+
+/*==================================================
+
+  Sección section-view-rpg
+  Muestra la ficha RPG del usuario
+
+==================================================*/
+.section-view-rpg input {
+  box-shadow:none;
+  height:1em;
+  width:100%;
+}
+.section-view-rpg textarea {
+  box-shadow:none;
+  height:7em;
+  width:100%;
+  resize:none;
+}
+
+
+/*==================================================
+
+  Sección section-edit-rpg
+  Muestra la ficha RPG del usuario
+
+==================================================*/
+.section-edit-rpg textarea {
+  height:7em;
+  width:50%;
+  resize:none;
+}
 
 
 /*==================================================

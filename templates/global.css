@@ -377,8 +377,9 @@ header a#logo {
   text-align:center;
 }
 header a#logo img{
-  max-width:100%;
   max-height:100%;
+  width:24px;
+  height:40px;
 }
 header div.title-and-description {
   padding:0 10px;
@@ -396,6 +397,10 @@ header a#logo {
   display:block;
   float:left;
   max-height:150px;
+}
+header a#logo img {
+  height:auto;
+  width:auto;
 }
 header div.title-and-description {
   font-size:133%;
@@ -1067,6 +1072,17 @@ li.post aside,
   float:left;
   width:220px;
 }
+
+li.post aside {
+  text-align:right;
+}
+
+li.post aside .avatar {
+  width:100%;
+  height:auto;
+  overflow:hidden;
+}
+
 li.post aside .rank,
 li.post aside .online,
 li.post aside dl {
@@ -1074,14 +1090,12 @@ li.post aside dl {
 }
 
 li.post aside dl dt {
-  float:left;
-  width:100px;
+  display:inline-block;
   padding:0 10px 0 0;
   margin:0 0 10px 0;
 }
 li.post aside dl dd {
-  float:left;
-  width:100px;
+  display:inline-block;
   padding:0 0 0 10px;
   margin:0 0 10px 0;
 }
@@ -1100,12 +1114,6 @@ li.post aside,
 .section-view-profile aside {
   width:220px;
 }
-li.post aside dl dt {
-  width:100px;
-}
-li.post aside dl dd {
-  width:100px;
-}
 
 li.post article,
 .section-post-preview article {
@@ -1119,12 +1127,6 @@ li.post aside,
 .section-post-preview aside,
 .section-view-profile aside {
   width:280px;
-}
-li.post aside dl dt {
-  width:100px;
-}
-li.post aside dl dd {
-  width:160px;
 }
 li.post article,
 .section-post-preview article {
